@@ -316,12 +316,6 @@ section {
   bottom: 1rem;
 }
 
-.arrow-about {
-  position: absolute;
-  right: 3.3rem;
-  bottom: 2.2rem;
-}
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
