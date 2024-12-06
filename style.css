@@ -322,12 +322,6 @@ section {
   bottom: 2.2rem;
 }
 
-.arrow-skills {
-  position: absolute;
-  right: -6.5rem;
-  bottom: 0.5rem;
-}
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
