@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Krishna Charan Thota</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Krishna Charan Thota</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#Skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Krishna Charan Thota profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Krishna Charan Thota</h1>
+        <p class="section__text__p2">Software Development Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/krishnacharanthotaResume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/krishnacharanthota'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/krishnacharan07'"
+          />
+        </div>
+      </div>
+      <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow-about"
+      onclick="location.href='./#about'"
+    />
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+
+        <div class="about-details-container-education">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>3+ years <br />Software Development Engineer</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p> Bachelors of Technology in Computer Science<br />Master's of Professional Studies in Data Science and Applications</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am Krishna Charan Thota, a dedicated and results-oriented Software Development Engineer with extensive experience in building scalable, cloud-native applications, designing efficient APIs, and optimizing software performance.
+              Currently, at Amazon.com Services LLC, I specialize in developing high-performance APIs with Java, designing ETL pipelines for large-scale metadata (1.2 billion records) using AWS Redshift, and creating responsive UIs with React.js while leveraging state-of-the-art technologies like AWS services (API Gateway, DynamoDB, ECS, SQS, and more).
+              My expertise extends to DevOps, where I implement end-to-end CI/CD pipelines using tools like AWS CodePipeline, CDK, and Jenkins to ensure seamless deployments.
+              Previously, at Uclid IT India Private Limited, I honed my skills in Object-Oriented Programming (OOP), RESTful microservices, and cloud-native development using Spring Boot, Spring Cloud, and Kubernetes, while leading a team to enhance Java applications by 35% in performance and user experience.
+              At AbhiBus Services India Private Limited, I engineered machine learning algorithms with Python and integrated real-time predictive analytics into React.js interfaces, driving strategic insights and decision-making.
+              With a Master's in Data Sciences from the University at Buffalo and a Bachelor's in Computer Science from Vignan's Foundation for Science Technology and Research, I bring a robust academic foundation. As an AWS Certified Solutions Architect Associate, I am proficient in technologies like Java, TypeScript, Python, Docker, Kubernetes, and frameworks such as Spring Boot, Spring.
+              I am committed to leveraging my technical expertise, leadership skills, and passion for innovation to deliver impactful, efficient, and user-focused solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow-skills"
+      onclick="location.href='./#Skills'"
+    />
+    </section>
+    <section id="Skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="Skills-details-container">
+        <div class="about-containers">
+          <div class="details-container-skills">
+            <h2 class="Skills-sub-title">Tools & Methodologies</h2>
+              <div class="container">
+                <div class="skills">
+                  <div class="skill">Git</div>
+                  <div class="skill">GitHub</div>
+                  <div class="skill">Maven</div>
+                  <div class="skill">Brazil</div>
+                  <div class="skill">Jenkins</div>
+                  <div class="skill">Agile/Scrum</div>
+                  <div class="skill">QuickSight</div>
+                  <div class="skill">Asana</div>
+                  <div class="skill">Quip</div>
+                  <div class="skill">Jira</div>
+                  <div class="skill">CI/CD</div>
+                  <div class="skill">Docker</div>
+                  <div class="skill">Kubernetes</div>
+              </div>
+              </div>
+          </div>
+          <div class="details-container-skills">
+            <h2 class="Skills-sub-title">Programming Languages</h2>
+              <div class="container">
+                  <div class="skills">
+                    <div class="skill">Java</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">TypeScript</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">GoLang</div>
+                    <div class="skill">Bash</div>
+                  </div>
+              </div>
+          </div>
+          <div class="details-container-skills">
+            <h2 class="Skills-sub-title">AWS Technologies & Databases</h2>
+              <div class="container">
+                  <div class="skills">
+                    <div class="skill">API Gateway</div>
+                    <div class="skill">S3</div>
+                    <div class="skill">SQS</div>
+                    <div class="skill">CloudWatch</div>
+                    <div class="skill">CloudFormation</div>
+                    <div class="skill">IAM</div>
+                    <div class="skill">ECS</div>
+                    <div class="skill">Fargate</div>
+                    <div class="skill">EC2</div>
+                    <div class="skill">CDK</div>
+                    <div class="skill">DynamoDB</div>
+                    <div class="skill">AWS Redshift</div>
+                    <div class="skill">MySQL</div>
+                  </div>
+              </div>
+          </div>
+          <div class="details-container-skills">
+            <h2 class="Skills-sub-title">Frameworks & Libraries</h2>
+              <div class="container">
+                  <div class="skills">
+                    <div class="skill">Spring</div>
+                    <div class="skill">Spring Boot</div>
+                    <div class="skill">Spring Cloud</div>
+                    <div class="skill">JUnit</div>
+                    <div class="skill">Mockito</div>
+                    <div class="skill">React.js</div>
+                    <div class="skill">Coral</div>
+                    <div class="skill">Redux</div>
+                    <div class="skill">Jest</div>
+                    <div class="skill">Cypress</div>
+                    <div class="skill">Bootstrap</div>
+                  </div>
+              </div>
+              <img
+              src="./assets/arrow.png"
+              alt="Arrow icon"
+              class="icon arrow-experience"
+              onclick="location.href='./#Experience'"
+            />
+          </div>
+    </section>
+    <section id="Experience">
+      <p class="section__text__p1">Explore my </p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Amazon-Logo.png"
+                alt="Project 1"
+                class="project-experience-img-amazon"
+              />
+              <p>
+                As a Software Development Engineer at Amazon, I have developed high-performance APIs with Java and DynamoDB, reducing data retrieval times by 29% and architected ETL processes for 1.2 billion records, improving reporting accuracy by 27%.
+                Leveraging AWS services like API Gateway, ECS, and CDK, I designed scalable cloud-native applications and pre-production environments to minimize deployment risks.
+                My expertise in React.js, Redux, and Jest/Cypress enhanced frontend performance, reducing load times by 20%.
+                Leading full SDLC efforts, I achieved a 98% on-time delivery rate and drove process improvements as Scrum Master, boosting team productivity by 15% through Agile methodologies.</p>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Abhibus-logo.png"
+                class="project-experience-img-abhi"/>
+                <p>
+                  As a Software Developer at AbhiBus, I developed a Python application with a React.js front-end, leveraging HTML and CSS to create responsive and visually engaging web pages for competitor data extraction and analysis.
+                  I engineered a high-performing machine learning algorithm with a 90.4% accuracy rate, integrating it into the React.js interface to enable real-time predictive analysis.
+                  Additionally, I conducted detailed factor analysis using Python and implemented intuitive data visualizations in the front-end, delivering actionable insights for strategic decision-making.
+                  This work demonstrated my ability to combine machine learning, data analysis, and UI development for impactful and user-centric solutions.
+                </p>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/UclidLogo.png"
+                class="project-experience-img-uclid"
+              />
+              <p> As a Software Engineer at Uclid IT, I gained extensive experience in Object-Oriented Programming (OOP) principles, enabling the development of modular and maintainable Java codebases.
+                I excelled in designing RESTful microservices using Spring Boot and Spring Cloud, integrating seamlessly with NoSQL databases for cloud-native distributed systems.
+                Proficient in unit testing with JUnit, I ensured code quality and reliability while utilizing tools like Kubernetes, Jenkins, and Maven for efficient delivery.
+                Leading a team of four developers, I successfully enhanced Java applications, achieving a 35% performance improvement, increased test coverage, and an improved user experience through innovative design and refactoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow-contact"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:krishnacharanthota@gmail.com">krishnacharanthota@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/krishnacharanthota/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Krishna Charan Thota. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
