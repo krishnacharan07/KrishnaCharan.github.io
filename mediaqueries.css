@@ -1,103 +1,87 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+/* =====================
+   TABLET — 1024px
+   ===================== */
+   @media screen and (max-width: 1024px) {
+    section { padding: 5rem 2.5rem; }
+    #desktop-nav { padding: 0 2.5rem; }
+  
+    #hero {
+      padding: 100px 2.5rem 60px;
+      gap: 2.5rem;
+    }
+  
+    .profile-ring { width: 280px; height: 280px; }
+  
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; }
   }
-  .about-containers {
-    flex-wrap: wrap;
+  
+  /* =====================
+     MOBILE — 768px
+     ===================== */
+  @media screen and (max-width: 768px) {
+    #desktop-nav { display: none; }
+    #hamburger-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 60px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250,249,246,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+  
+    section { padding: 4rem 1.5rem; }
+  
+    #hero {
+      grid-template-columns: 1fr;
+      padding: 90px 1.5rem 60px;
+      text-align: center;
+    }
+  
+    .hero-eyebrow { margin: 0 auto 1.5rem; }
+    .hero-actions { justify-content: center; }
+    .hero-socials { justify-content: center; }
+    .hero-sub { margin: 0 auto 2rem; }
+  
+    .hero-visual {
+      order: -1;
+      margin-bottom: 1rem;
+    }
+  
+    .profile-ring { width: 200px; height: 200px; }
+  
+    .stat-1 { top: -10px; right: 20px; }
+    .stat-2 { bottom: 0px; right: 10px; }
+    .stat-3 { display: none; }
+  
+    .about-cards { grid-template-columns: 1fr; }
+  
+    .skills-grid { grid-template-columns: 1fr; }
+  
+    .timeline { padding-left: 1rem; }
+    .timeline-header { flex-direction: column; gap: 0.5rem; }
+    .timeline-date { align-self: flex-start; }
+  
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    footer nav { justify-content: center; }
   }
-  #contact,
-  #projects {
-    height: fit-content;
+  
+  /* =====================
+     SMALL MOBILE — 480px
+     ===================== */
+  @media screen and (max-width: 480px) {
+    .hero-name { font-size: 2.5rem; }
+    .btn-primary, .btn-ghost { padding: 0.65rem 1.25rem; font-size: 0.85rem; }
+    .timeline-content { padding: 1.25rem; }
   }
-}
-
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
-}
+  
