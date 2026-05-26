@@ -1,6 +1,37 @@
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const menu = document.querySelector('.menu-links');
+  const icon = document.querySelector('.hamburger-icon');
+  menu.classList.toggle('open');
+  icon.classList.toggle('open');
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(
+  '.section-label, .section-title, .about-card, .skill-group, .timeline-item, .project-card'
+).forEach((el, i) => {
+  el.style.transitionDelay = (i % 4) * 0.08 + 's';
+  observer.observe(el);
+});
+
+document.querySelectorAll('.nav-links a, .menu-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.menu-links')?.classList.remove('open');
+    document.querySelector('.hamburger-icon')?.classList.remove('open');
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('desktop-nav') || document.getElementById('hamburger-nav');
+  if (window.scrollY > 20) {
+    nav?.classList.add('scrolled');
+  } else {
+    nav?.classList.remove('scrolled');
+  }
+});
