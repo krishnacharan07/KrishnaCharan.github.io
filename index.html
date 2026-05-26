@@ -1,280 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Krishna Charan Thota</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#Skills">Skills</a></li>
-          <li><a href="#Experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Charan Thota | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <nav id="desktop-nav">
+    <div class="logo">KCT</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">KCT</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Krishna Charan Thota</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#Skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Krishna Charan Thota profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Krishna Charan Thota</h1>
-        <p class="section__text__p2">Software Development Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Krishnacharanresume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-          <button class="btn btn-color-2" onclick="location.href='https://topmate.io/krishna_charan_thota'">
-            Book Appointment
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/krishnacharanthota'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/krishnacharan07'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+    </div>
+  </nav>
 
-        <div class="about-details-container-education">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>3+ years <br />Software Development Engineer</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p> Bachelors of Technology in Computer Science<br />Master's of Professional Studies in Data Science and Applications</p>
-            </div>
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-name">Krishna<br><em>Charan Thota</em></h1>
+      <p class="hero-title">Software Engineer</p>
+      <p class="hero-sub">Building distributed, cloud-native backend systems at scale.<br>Nokia · Starlink · Private 5G · AWS · Azure</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="./assets/Krishnacharanresume.pdf" target="_blank">Download Resume</a>
+        <a class="btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/krishnacharanthota" target="_blank" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/krishnacharan07" target="_blank" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a call
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="profile-ring">
+        <img src="./assets/profile-pic.png" alt="Krishna Charan Thota" class="profile-img" />
+      </div>
+      <div class="stat-card stat-1">
+        <span class="stat-num">4+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-card stat-2">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Services Owned</span>
+      </div>
+      <div class="stat-card stat-3">
+        <span class="stat-num">AWS</span>
+        <span class="stat-label">Certified</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Building systems that hold up under real pressure.</h2>
+        <p>I'm a Software Engineer currently at <strong>Armada AI</strong> in Bellevue, WA, working on Private 5G infrastructure. My work spans end-to-end data ingestion pipelines from Nokia and Starlink, distributed webhook delivery systems, SIM lifecycle management APIs, and full observability stacks.</p>
+        <p>Before that I spent 2.5 years at <strong>Amazon</strong> shipping high-throughput Java APIs, ETL pipelines at billion-record scale, and cloud-native microservices on AWS.</p>
+        <p>I care about systems that are observable, reliable, and built to last. I own production incidents, write the docs, and stick around after the merge.</p>
+        <p>Currently pursuing an MBA at WestCliff University, deepening my understanding of product strategy, business operations, and the intersection of technology and business decision-making.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <div class="text-container">
-            <p>
-              I am Krishna Charan Thota, a dedicated and results-oriented Software Development Engineer with extensive experience in building scalable, cloud-native applications, designing efficient APIs, and optimizing software performance.
-              Currently, at Amazon.com Services LLC, I specialize in developing high-performance APIs with Java, designing ETL pipelines for large-scale metadata (1.2 billion records) using AWS Redshift, and creating responsive UIs with React.js while leveraging state-of-the-art technologies like AWS services (API Gateway, DynamoDB, ECS, SQS, and more).
-              My expertise extends to DevOps, where I implement end-to-end CI/CD pipelines using tools like AWS CodePipeline, CDK, and Jenkins to ensure seamless deployments.
-              Previously, at Uclid IT India Private Limited, I honed my skills in Object-Oriented Programming (OOP), RESTful microservices, and cloud-native development using Spring Boot, Spring Cloud, and Kubernetes, while leading a team to enhance Java applications by 35% in performance and user experience.
-              At AbhiBus Services India Private Limited, I engineered machine learning algorithms with Python and integrated real-time predictive analytics into React.js interfaces, driving strategic insights and decision-making.
-              With a Master's in Data Sciences from the University at Buffalo and a Bachelor's in Computer Science from Vignan's Foundation for Science Technology and Research, I bring a robust academic foundation. As an AWS Certified Solutions Architect Associate, I am proficient in technologies like Java, TypeScript, Python, Docker, Kubernetes, and frameworks such as Spring Boot, Spring.
-              I am committed to leveraging my technical expertise, leadership skills, and passion for innovation to deliver impactful, efficient, and user-focused solutions.
-            </p>
+          <h3>4+ Years</h3>
+          <p>Building production backend systems across startups and big tech</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
+          <h3>3 Degrees</h3>
+          <p>CS, Data Sciences, and MBA spanning India and the US</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Security Focused</h3>
+          <p>JWT, HMAC, Azure Key Vault, OAuth2 and CVE patching across production services</p>
+        </div>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>AWS Certified</h3>
+          <p>Solutions Architect Associate with deep AWS and Azure production experience</p>
         </div>
       </div>
-    </section>
-    <section id="Skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="Skills-details-container">
-        <div class="about-containers">
-          <div class="details-container-skills">
-            <h2 class="Skills-sub-title">Tools & Methodologies</h2>
-              <div class="container">
-                <div class="skills">
-                  <div class="skill">Git</div>
-                  <div class="skill">GitHub</div>
-                  <div class="skill">Maven</div>
-                  <div class="skill">Brazil</div>
-                  <div class="skill">Jenkins</div>
-                  <div class="skill">Agile/Scrum</div>
-                  <div class="skill">QuickSight</div>
-                  <div class="skill">Asana</div>
-                  <div class="skill">Quip</div>
-                  <div class="skill">Jira</div>
-                  <div class="skill">CI/CD</div>
-                  <div class="skill">Docker</div>
-                  <div class="skill">Kubernetes</div>
-              </div>
-              </div>
-          </div>
-          <div class="details-container-skills">
-            <h2 class="Skills-sub-title">Programming Languages</h2>
-              <div class="container">
-                  <div class="skills">
-                    <div class="skill">Java</div>
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">TypeScript</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">GoLang</div>
-                    <div class="skill">Bash</div>
-                    <div class="skill">Python</div>
-                  </div>
-              </div>
-          </div>
-          <div class="details-container-skills">
-            <h2 class="Skills-sub-title">AWS Technologies & Databases</h2>
-              <div class="container">
-                  <div class="skills">
-                    <div class="skill">API Gateway</div>
-                    <div class="skill">S3</div>
-                    <div class="skill">SQS</div>
-                    <div class="skill">CloudWatch</div>
-                    <div class="skill">CloudFormation</div>
-                    <div class="skill">IAM</div>
-                    <div class="skill">ECS</div>
-                    <div class="skill">Fargate</div>
-                    <div class="skill">EC2</div>
-                    <div class="skill">CDK</div>
-                    <div class="skill">DynamoDB</div>
-                    <div class="skill">AWS Redshift</div>
-                    <div class="skill">MySQL</div>
-                  </div>
-              </div>
-          </div>
-          <div class="details-container-skills">
-            <h2 class="Skills-sub-title">Frameworks & Libraries</h2>
-              <div class="container">
-                  <div class="skills">
-                    <div class="skill">Spring</div>
-                    <div class="skill">Spring Boot</div>
-                    <div class="skill">Spring Cloud</div>
-                    <div class="skill">JUnit</div>
-                    <div class="skill">Mockito</div>
-                    <div class="skill">React.js</div>
-                    <div class="skill">Coral</div>
-                    <div class="skill">Redux</div>
-                    <div class="skill">Jest</div>
-                    <div class="skill">Cypress</div>
-                    <div class="skill">Bootstrap</div>
-                  </div>
-              </div>
-          </div>
-    </section>
-    <section id="Experience">
-      <p class="section__text__p1">Explore my </p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Amazon-Logo.png"
-                alt="Project 1"
-                class="project-experience-img-amazon"
-              />
-              <p>
-                As a Software Development Engineer at Amazon, I have developed high-performance APIs with Java and DynamoDB, reducing data retrieval times by 29% and architected ETL processes for 1.2 billion records, improving reporting accuracy by 27%.
-                Leveraging AWS services like API Gateway, ECS, and CDK, I designed scalable cloud-native applications and pre-production environments to minimize deployment risks.
-                My expertise in React.js, Redux, and Jest/Cypress enhanced frontend performance, reducing load times by 20%.
-                Leading full SDLC efforts, I achieved a 98% on-time delivery rate and drove process improvements as Scrum Master, boosting team productivity by 15% through Agile methodologies.</p>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Abhibus-logo.png"
-                class="project-experience-img-abhi"/>
-                <p>
-                  As a Software Development Intern at AbhiBus, I developed a Python application with a React.js front-end, leveraging HTML and CSS to create responsive and visually engaging web pages for competitor data extraction and analysis.
-                  I engineered a high-performing machine learning algorithm with a 90.4% accuracy rate, integrating it into the React.js interface to enable real-time predictive analysis.
-                  Additionally, I conducted detailed factor analysis using Python and implemented intuitive data visualizations in the front-end, delivering actionable insights for strategic decision-making.
-                  This work demonstrated my ability to combine machine learning, data analysis, and UI development for impactful and user-centric solutions.
-                </p>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/UclidLogo.png"
-                class="project-experience-img-uclid"
-              />
-              <p> As a Software Engineer at Uclid IT, I gained extensive experience in Object-Oriented Programming (OOP) principles, enabling the development of modular and maintainable Java codebases.
-                I excelled in designing RESTful microservices using Spring Boot and Spring Cloud, integrating seamlessly with NoSQL databases for cloud-native distributed systems.
-                Proficient in unit testing with JUnit, I ensured code quality and reliability while utilizing tools like Kubernetes, Jenkins, and Maven for efficient delivery.
-                Leading a team of four developers, I successfully enhanced Java applications, achieving a 35% performance improvement, increased test coverage, and an improved user experience through innovative design and refactoring.</p>
-            </div>
-          </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-label">Skills</div>
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">Go</span>
+          <span class="tag tag-primary">Java</span>
+          <span class="tag tag-primary">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Bash</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
         </div>
       </div>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:krishnacharanthota@gmail.com">krishnacharanthota@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/krishnacharanthota/">LinkedIn</a></p>
+      <div class="skill-group">
+        <h3>Cloud & Databases</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">AWS</span>
+          <span class="tag tag-primary">Azure</span>
+          <span class="tag tag-primary">DynamoDB</span>
+          <span class="tag tag-primary">ScyllaDB</span>
+          <span class="tag">Redshift</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">MySQL</span>
         </div>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+      <div class="skill-group">
+        <h3>Infrastructure</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">Kubernetes</span>
+          <span class="tag tag-primary">Docker</span>
+          <span class="tag tag-primary">Helm</span>
+          <span class="tag tag-primary">CI/CD</span>
+          <span class="tag">Istio</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Observability</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">Prometheus</span>
+          <span class="tag tag-primary">Grafana</span>
+          <span class="tag">CloudWatch</span>
+          <span class="tag">OpenAPI/Swagger</span>
+          <span class="tag">Structured Logging</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Security & Auth</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">Azure Key Vault</span>
+          <span class="tag tag-primary">JWT</span>
+          <span class="tag tag-primary">HMAC</span>
+          <span class="tag">OAuth2</span>
+          <span class="tag">Keycloak</span>
+          <span class="tag">Workload Identity</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks</h3>
+        <div class="skill-tags">
+          <span class="tag tag-primary">Spring Boot</span>
+          <span class="tag tag-primary">React.js</span>
+          <span class="tag">Spring Cloud</span>
+          <span class="tag">Redux</span>
+          <span class="tag">JUnit</span>
+          <span class="tag">Mockito</span>
+          <span class="tag">Jest</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-label">Projects</div>
+    <h2 class="section-title">What I've Built</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <span class="project-badge">Private 5G</span>
+        </div>
+        <h3>Nokia 5G Telemetry Ingestion Pipeline</h3>
+        <p>End-to-end data ingestion from Nokia NDAC and Starlink APIs covering RANs, SIMs, fault alarms, and 16 performance management counters. Eliminated silent alarm drops and restored full SIM visibility across the platform.</p>
+        <ul class="project-highlights">
+          <li>Recursive arithmetic evaluator for PM metric formulas</li>
+          <li>NHG-based fallback that brought skipped alarms to zero</li>
+          <li>Automatic SIM pagination handling all devices in a single cycle</li>
+        </ul>
+        <div class="project-tags">
+          <span>Go</span><span>Kubernetes</span><span>Azure</span><span>Nokia NDAC</span><span>Starlink</span><span>Helm</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <span class="project-badge">Distributed Systems</span>
+        </div>
+        <h3>Distributed Webhook Delivery System</h3>
+        <p>Full webhook platform built from scratch with HMAC payload signing, exponential backoff retry, async goroutine dispatch, and automated failure alerting to technical admins after max retries.</p>
+        <ul class="project-highlights">
+          <li>ScyllaDB persistence for full delivery audit trail</li>
+          <li>Azure Key Vault integration for secure token retrieval</li>
+          <li>Mailgun-based failure alerts with delivery metrics</li>
+        </ul>
+        <div class="project-tags">
+          <span>Go</span><span>ScyllaDB</span><span>HMAC</span><span>Azure Key Vault</span><span>Mailgun</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <span class="project-badge">Compliance</span>
+        </div>
+        <h3>Platform Audit Logging System</h3>
+        <p>Comprehensive audit logging across webhook lifecycle events, SIM provisioning, deprovisioning, and account-level actions. Built to meet governance and compliance requirements with full traceability across all critical platform operations.</p>
+        <ul class="project-highlights">
+          <li>Covers create, update, delete across webhooks and SIMs</li>
+          <li>Pre-deletion name capture for accurate audit records</li>
+          <li>Structured event schema across multiple services</li>
+        </ul>
+        <div class="project-tags">
+          <span>Java</span><span>PostgreSQL</span><span>REST APIs</span><span>Microservices</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="project-badge">Observability</span>
+        </div>
+        <h3>Unified Platform Observability Stack</h3>
+        <p>End-to-end observability infrastructure across the P5G platform covering Prometheus metrics collection, structured logging standardization, and Grafana dashboards for operational visibility.</p>
+        <ul class="project-highlights">
+          <li>P99 HTTP latency and per-vendor success rate tracking</li>
+          <li>In-flight job counts and pod-level CPU and memory usage</li>
+          <li>Replaced ad hoc monitoring with structured production visibility</li>
+        </ul>
+        <div class="project-tags">
+          <span>Prometheus</span><span>Grafana</span><span>PromQL</span><span>Structured Logging</span><span>Go</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+          </div>
+          <span class="project-badge">API Design</span>
+        </div>
+        <h3>SIM Lifecycle Management API</h3>
+        <p>Full v1 to v2 API migration for SIM provisioning, deprovisioning, and editing across multiple service layers. Handled complex vendor-specific edge cases including partial success responses and network change triggers.</p>
+        <ul class="project-highlights">
+          <li>PARTIAL_SUCCESS handling previously treated as failures</li>
+          <li>Auto deprovision and reprovision on network name changes</li>
+          <li>Targeted PATCH endpoint for partial DB updates on SIM edits</li>
+        </ul>
+        <div class="project-tags">
+          <span>Go</span><span>REST APIs</span><span>PostgreSQL</span><span>Nokia NDAC</span><span>Istio</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/></svg>
+          </div>
+          <span class="project-badge">Geospatial</span>
+        </div>
+        <h3>5G Site Geocoding Pipeline</h3>
+        <p>Google Maps API backed geocoding pipeline that converts raw Nokia latitude and longitude coordinates into human-readable addresses for 5G sites and RAN assets, enabling accurate location display across the platform.</p>
+        <ul class="project-highlights">
+          <li>Vault-backed Google API token injection for secure access</li>
+          <li>Covers both site and RAN asset address resolution</li>
+          <li>Integrated directly into the Nokia asset onboarding flow</li>
+        </ul>
+        <div class="project-tags">
+          <span>Go</span><span>Google Maps API</span><span>Azure Key Vault</span><span>Nokia 5G</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Where I've Worked</h2>
+    <div class="timeline">
+
+      <div class="timeline-item active">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Software Engineer</h3>
+              <p class="timeline-company">Armada AI</p>
+            </div>
+            <span class="timeline-date">Mar 2025 – Present</span>
+          </div>
+          <p class="timeline-location">Bellevue, WA</p>
+          <ul class="timeline-bullets">
+            <li>Designed end-to-end cloud-native data ingestion pipeline for private 5G and satellite infrastructure, integrating <strong>Nokia</strong> and <strong>Starlink</strong> vendor APIs into a unified analytics platform.</li>
+            <li>Built complete SIM lifecycle management APIs with end-to-end ownership, handling vendor-specific edge cases including silent data loss bugs that caused full SIM visibility loss in production.</li>
+            <li>Architected distributed webhook delivery system with <strong>HMAC</strong> signing, exponential backoff retry, persistent metadata, and async goroutine dispatch.</li>
+            <li>Built unified observability stack with <strong>Prometheus</strong> and <strong>Grafana</strong> covering P99 HTTP latency, per-vendor success rates, and pod-level resource usage.</li>
+            <li>Integrated <strong>Azure Key Vault</strong> with Managed Identity, eliminating hardcoded credentials across services.</li>
+            <li>Owned production incident response as primary on-call engineer, driving high-severity issue resolution and cross-team escalations.</li>
           </ul>
+          <div class="timeline-tags">
+            <span>Go</span><span>Kubernetes</span><span>Azure</span><span>Prometheus</span><span>ScyllaDB</span><span>Nokia 5G</span>
+          </div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Krishna Charan Thota. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+      </div>
 
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Software Development Engineer</h3>
+              <p class="timeline-company">Amazon Services LLC</p>
+            </div>
+            <span class="timeline-date">Oct 2022 – Mar 2025</span>
+          </div>
+          <p class="timeline-location">Bellevue, WA</p>
+          <ul class="timeline-bullets">
+            <li>Designed high-performance <strong>Java</strong> API with DynamoDB, reducing data retrieval times by 29%.</li>
+            <li>Architected ETL pipeline for <strong>1.2 billion</strong> metadata records into Redshift, cutting reporting time by 27%.</li>
+            <li>Executed throttling configuration that reduced service disruptions by <strong>95%</strong> during peak load.</li>
+            <li>Designed pre-production environment with <strong>AWS CodePipeline</strong> and CDK in TypeScript.</li>
+            <li>Engineered Java microservices with Spring Boot, reducing debugging time by 30% across critical projects.</li>
+            <li>Led SDLC efforts achieving 98% on-time delivery, serving as Scrum Master improving team productivity by 15%.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Java</span><span>AWS</span><span>DynamoDB</span><span>Redshift</span><span>Spring Boot</span><span>Kubernetes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Software Dev Intern</h3>
+              <p class="timeline-company">AbhiBus Services</p>
+            </div>
+            <span class="timeline-date">Dec 2019 – Apr 2020</span>
+          </div>
+          <p class="timeline-location">India</p>
+          <ul class="timeline-bullets">
+            <li>Built Python web scraping application reducing manual research time by 50 hours per month.</li>
+            <li>Engineered ML algorithm with <strong>90.4% accuracy</strong>, integrated into React.js for real-time predictions.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Python</span><span>React.js</span><span>Machine Learning</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-label">Contact</div>
+    <div class="contact-wrapper">
+      <div class="contact-text">
+        <h2>Let's connect.</h2>
+        <p>Feel free to reach out for collaboration, opportunities, or just to talk tech.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:krishnacharanthota@gmail.com" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">krishnacharanthota@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/krishnacharanthota/" target="_blank" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">krishnacharanthota</p>
+          </div>
+        </a>
+        <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Book a call</p>
+            <p class="contact-value">topmate.io/krishna_charan_thota</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="logo">KCT</span>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p>&#169; 2026 Krishna Charan Thota</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
