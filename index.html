@@ -8,460 +8,675 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
+<div class="noise"></div>
 
-  <div class="noise"></div>
+<nav id="desktop-nav">
+  <div class="logo">KCT</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <nav id="desktop-nav">
-    <div class="logo">KCT</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav id="hamburger-nav">
+  <div class="logo">KCT</div>
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu-links">
+      <ul>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <nav id="hamburger-nav">
-    <div class="logo">KCT</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      <span class="eyebrow-text">Open to senior backend roles · Bellevue, WA</span>
+    </div>
+    <h1 class="hero-name">Krishna<br><em>Charan Thota</em></h1>
+    <p class="hero-title">Software Engineer · Private 5G & Distributed Systems</p>
+    <p class="hero-sub">Building backend infra where failures are expensive —<br>
+      <strong>Nokia · Starlink</strong> telemetry pipelines, billion-record ETL at Amazon,<br>
+      and cloud-native systems that hold up under real production pressure.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="./assets/Krishnacharanresume.pdf" target="_blank">Resume</a>
+      <a class="btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/krishnacharanthota" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/krishnacharan07" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book a call
+      </a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="profile-ring">
+      <img src="./assets/profile-pic.png" alt="Krishna Charan Thota" class="profile-img" />
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">Private 5G</span>
+      <span class="hero-tag">Distributed Systems</span>
+      <span class="hero-tag">AWS Certified</span>
+      <span class="hero-tag">Go · Java · Python</span>
+      <span class="hero-tag">Armada AI</span>
+      <span class="hero-tag">ex-Amazon SDE</span>
+      <span class="hero-tag">UCLID · India</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Building systems that hold up under real pressure.</h2>
+      <p>I'm a Software Engineer currently at <strong>Armada AI</strong> in Bellevue, WA, working on Private 5G infrastructure. My work spans end-to-end data ingestion pipelines from Nokia and Starlink, distributed webhook delivery systems, SIM lifecycle management APIs, and full observability stacks.</p>
+      <p>Before that I spent 2.5 years at <strong>Amazon</strong> shipping high-throughput Java APIs, ETL pipelines at billion-record scale, and cloud-native microservices on AWS.</p>
+      <p>I care about systems that are observable, reliable, and built to last. I own production incidents, write the docs, and stick around after the merge.</p>
+      <p>Currently pursuing an MBA at WestCliff University, deepening my understanding of product strategy, business operations, and the intersection of technology and business decision-making.</p>
+    </div>
+    <div class="about-cards">
+      <div class="about-card">
+        <div class="about-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>5+ Years</h3><p>Building production backend systems across startups and big tech</p>
       </div>
-      <div class="menu-links">
-        <ul>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </ul>
+      <div class="about-card">
+        <div class="about-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>3 Degrees</h3><p>CS, Data Sciences, and MBA spanning India and the US</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Security Focused</h3><p>JWT, HMAC, Azure Key Vault, OAuth2 and CVE patching in production</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>AWS Certified</h3><p>Solutions Architect Associate with deep AWS and Azure production experience</p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h1 class="hero-name">Krishna<br><em>Charan Thota</em></h1>
-      <p class="hero-title">Software Engineer</p>
-      <p class="hero-sub">Building distributed, cloud-native backend systems at scale.<br>Nokia · Starlink · Private 5G · AWS · Azure</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="./assets/Krishnacharanresume.pdf" target="_blank">Resume</a>
-        <a class="btn-ghost" href="#contact">Get in touch</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/krishnacharanthota" target="_blank" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/krishnacharan07" target="_blank" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </a>
-        <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book a call
-        </a>
+<section id="skills">
+  <div class="section-label">Skills</div>
+  <h1 class="title">Tech Stack</h1>
+  <div class="skills-grid">
+
+    <div class="skill-category cat-languages">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Languages</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><i class="devicon-go-original-wordmark colored"></i><span>Go</span></div>
+        <div class="icon-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+        <div class="icon-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="icon-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+        <div class="icon-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="icon-item"><i class="devicon-bash-plain colored"></i><span>Bash</span></div>
+        <div class="icon-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+        <div class="icon-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="profile-ring">
-        <img src="./assets/profile-pic.png" alt="Krishna Charan Thota" class="profile-img" />
-      </div>
-      <div class="stat-card stat-1">
-        <span class="stat-num">5+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-card stat-2">
-        <span class="stat-num">10+</span>
-        <span class="stat-label">Services Owned</span>
-      </div>
-      <div class="stat-card stat-3">
-        <span class="stat-num">AWS</span>
-        <span class="stat-label">Certified</span>
+
+    <div class="skill-category cat-cloud">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Cloud & Databases</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+        <div class="icon-item"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+        <div class="icon-item"><i class="devicon-dynamodb-plain colored"></i><span>DynamoDB</span></div>
+        <div class="icon-item"><div class="badge-icon badge-scylla">Scylla DB</div><span>ScyllaDB</span></div>
+        <div class="icon-item"><i class="devicon-amazonwebservices-plain colored"></i><span>Redshift</span></div>
+        <div class="icon-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+        <div class="icon-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+        <div class="icon-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
       </div>
     </div>
-  </section>
 
-  <section id="about">
-    <div class="section-label">About</div>
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>Building systems that hold up under real pressure.</h2>
-        <p>I'm a Software Engineer currently at <strong>Armada AI</strong> in Bellevue, WA, working on Private 5G infrastructure. My work spans end-to-end data ingestion pipelines from Nokia and Starlink, distributed webhook delivery systems, SIM lifecycle management APIs, and full observability stacks.</p>
-        <p>Before that I spent 2.5 years at <strong>Amazon</strong> shipping high-throughput Java APIs, ETL pipelines at billion-record scale, and cloud-native microservices on AWS.</p>
-        <p>I care about systems that are observable, reliable, and built to last. I own production incidents, write the docs, and stick around after the merge.</p>
-        <p>Currently pursuing an MBA at WestCliff University, deepening my understanding of product strategy, business operations, and the intersection of technology and business decision-making.</p>
-      </div>
-      <div class="about-cards">
-        <div class="about-card">
-          <div class="about-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>5+ Years</h3>
-          <p>Building production backend systems across startups and big tech</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          </div>
-          <h3>3 Degrees</h3>
-          <p>CS, Data Sciences, and MBA spanning India and the US</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Security Focused</h3>
-          <p>JWT, HMAC, Azure Key Vault, OAuth2 and CVE patching across production services</p>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>AWS Certified</h3>
-          <p>Solutions Architect Associate with deep AWS and Azure production experience</p>
-        </div>
+    <div class="skill-category cat-infra">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Infrastructure</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
+        <div class="icon-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+        <div class="icon-item"><div class="badge-icon badge-helm">HELM</div><span>Helm</span></div>
+        <div class="icon-item"><i class="devicon-istio-plain colored"></i><span>Istio</span></div>
+        <div class="icon-item"><i class="devicon-jenkins-line colored"></i><span>Jenkins</span></div>
+        <div class="icon-item"><i class="devicon-github-original colored"></i><span>GH Actions</span></div>
       </div>
     </div>
-  </section>
 
-  <section id="skills">
-    <div class="section-label">Skills</div>
-    <h2 class="section-title">Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">Go</span>
-          <span class="tag tag-primary">Java</span>
-          <span class="tag tag-primary">Python</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Bash</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Cloud & Databases</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">AWS</span>
-          <span class="tag tag-primary">Azure</span>
-          <span class="tag tag-primary">DynamoDB</span>
-          <span class="tag tag-primary">ScyllaDB</span>
-          <span class="tag">Redshift</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">MySQL</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Infrastructure</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">Kubernetes</span>
-          <span class="tag tag-primary">Docker</span>
-          <span class="tag tag-primary">Helm</span>
-          <span class="tag tag-primary">CI/CD</span>
-          <span class="tag">Istio</span>
-          <span class="tag">Jenkins</span>
-          <span class="tag">GitHub Actions</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Observability</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">Prometheus</span>
-          <span class="tag tag-primary">Grafana</span>
-          <span class="tag">CloudWatch</span>
-          <span class="tag">OpenAPI/Swagger</span>
-          <span class="tag">Structured Logging</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Security & Auth</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">Azure Key Vault</span>
-          <span class="tag tag-primary">JWT</span>
-          <span class="tag tag-primary">HMAC</span>
-          <span class="tag">OAuth2</span>
-          <span class="tag">Keycloak</span>
-          <span class="tag">Workload Identity</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Frameworks</h3>
-        <div class="skill-tags">
-          <span class="tag tag-primary">Spring Boot</span>
-          <span class="tag tag-primary">React.js</span>
-          <span class="tag">Spring Cloud</span>
-          <span class="tag">Redux</span>
-          <span class="tag">JUnit</span>
-          <span class="tag">Mockito</span>
-          <span class="tag">Jest</span>
-        </div>
+    <div class="skill-category cat-obs">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Observability</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="badge-icon badge-prom">PROM</div><span>Prometheus</span></div>
+        <div class="icon-item"><div class="badge-icon badge-grafana">GRAF</div><span>Grafana</span></div>
+        <div class="icon-item"><i class="devicon-amazonwebservices-plain colored"></i><span>CloudWatch</span></div>
+        <div class="icon-item"><i class="devicon-swagger-plain colored"></i><span>OpenAPI</span></div>
       </div>
     </div>
-  </section>
 
-  <section id="projects">
-    <div class="section-label">Projects</div>
-    <h2 class="section-title">What I've Built</h2>
-    <div class="projects-grid">
+    <div class="skill-category cat-security">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Security & Auth</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><div class="badge-icon badge-kv">KV</div><span>Key Vault</span></div>
+        <div class="icon-item"><div class="badge-icon badge-jwt">JWT</div><span>JWT</span></div>
+        <div class="icon-item"><div class="badge-icon badge-hmac">HMAC</div><span>HMAC</span></div>
+        <div class="icon-item"><i class="devicon-oauth-plain colored"></i><span>OAuth2</span></div>
+        <div class="icon-item"><i class="devicon-keycloak-plain colored"></i><span>Keycloak</span></div>
+      </div>
+    </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          </div>
+    <div class="skill-category cat-frameworks">
+      <div class="cat-header"><div class="cat-dot"></div><span class="cat-title">Frameworks</span></div>
+      <div class="icon-grid">
+        <div class="icon-item"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></div>
+        <div class="icon-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+        <div class="icon-item"><i class="devicon-redux-original colored"></i><span>Redux</span></div>
+        <div class="icon-item"><i class="devicon-junit5-plain colored"></i><span>JUnit</span></div>
+        <div class="icon-item"><i class="devicon-jest-plain colored"></i><span>Jest</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-label">Projects</div>
+  <h1 class="title">What I've Built</h1>
+  <div class="projects-list">
+
+    <div class="project-full">
+      <div class="project-full-header">
+        <div class="project-full-left">
           <span class="project-badge">Private 5G</span>
+          <h3>Nokia 5G Telemetry Ingestion Pipeline</h3>
+          <p class="project-summary">End-to-end ingestion of Nokia NDAC data — RANs, SIMs, fault alarms, and 16 performance management counters — into Armada's unified P5G analytics platform. Built, broke, and hardened across real Nokia gNB hardware (gNB498730).</p>
         </div>
-        <h3>Nokia 5G Telemetry Ingestion Pipeline</h3>
-        <p>End-to-end data ingestion from Nokia NDAC and Starlink APIs covering RANs, SIMs, fault alarms, and 16 performance management counters. Eliminated silent alarm drops and restored full SIM visibility across the platform.</p>
-        <ul class="project-highlights">
-          <li>Recursive arithmetic evaluator for PM metric formulas</li>
-          <li>NHG-based fallback that brought skipped alarms to zero</li>
-          <li>Automatic SIM pagination handling all devices in a single cycle</li>
-        </ul>
-        <div class="project-tags">
-          <span>Go</span><span>Kubernetes</span><span>Azure</span><span>Nokia NDAC</span><span>Starlink</span><span>Helm</span>
+        <div class="project-full-tags">
+          <span>Go</span><span>Kubernetes</span><span>Azure</span><span>Nokia NDAC</span><span>Starlink</span><span>Helm</span><span>Cortex</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-vendor">Nokia NDAC API<div class="arch-sub">RANs · SIMs · FM · PM</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">hyperwave-ingestion-svc<div class="arch-sub">Compute() · paginate · preprocess</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-infra">metrics-relay-svc<div class="arch-sub">Kafka · fetch & forward</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">observability-svc<div class="arch-sub">Cortex → Prometheus → Grafana</div></div>
+        </div>
+        <div class="arch-row arch-row-secondary">
+          <div class="arch-node node-vendor">Starlink API<div class="arch-sub">Satellite links</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">hyperwave-ingestion-svc<div class="arch-sub">same ingestion cycle</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">hyperwave-svc<div class="arch-sub">Asset mapping · NHG fallback</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">bff-layer<div class="arch-sub">Backend for Frontend</div></div>
+        </div>
+      </div>
+
+      <div class="project-decisions">
+        <div class="decision-card">
+          <div class="decision-label">Hard problem</div>
+          <p>Nokia PM formulas come as raw strings like <code>ETHIF_DL_BYTES / interval</code> — built a recursive <code>Compute()</code> evaluator with row-level aggregation to prevent Cortex duplicate-series rejection.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">Silent failure fixed</div>
+          <p>IXR and HPE Edge alarms had no asset match and were silently dropped. Added NHG-based fallback — result: 0 skipped alarms.</p>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">Scale edge case</div>
+          <p>Nokia SIM API paginates at 100 items. 94 of 102 SIMs were silently missing. Added automatic pagination loop — all SIMs ingest in one cycle.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-full">
+      <div class="project-full-header">
+        <div class="project-full-left">
           <span class="project-badge">Distributed Systems</span>
+          <h3>Distributed Webhook Delivery System</h3>
+          <p class="project-summary">Built the entire notification-svc from scratch — a production webhook delivery platform with HMAC signing, exponential backoff retry, async goroutine dispatch, ScyllaDB audit trail, and Mailgun failure alerting.</p>
         </div>
-        <h3>Distributed Webhook Delivery System</h3>
-        <p>Full webhook platform built from scratch with HMAC payload signing, exponential backoff retry, async goroutine dispatch, and automated failure alerting to technical admins after max retries.</p>
-        <ul class="project-highlights">
-          <li>ScyllaDB persistence for full delivery audit trail</li>
-          <li>Azure Key Vault integration for secure token retrieval</li>
-          <li>Mailgun-based failure alerts with delivery metrics</li>
-        </ul>
-        <div class="project-tags">
-          <span>Go</span><span>ScyllaDB</span><span>HMAC</span><span>Azure Key Vault</span><span>Mailgun</span>
+        <div class="project-full-tags">
+          <span>Go</span><span>ScyllaDB</span><span>HMAC</span><span>Azure Key Vault</span><span>Mailgun</span><span>Goroutines</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <span class="project-badge">Compliance</span>
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-svc">Alert trigger<div class="arch-sub">P5G platform event</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">WebhookHandler<div class="arch-sub">HMAC sign · goroutine dispatch</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-vendor">Customer endpoint<div class="arch-sub">HTTP POST + JWT bearer</div></div>
         </div>
-        <h3>Platform Audit Logging System</h3>
-        <p>Comprehensive audit logging across webhook lifecycle events, SIM provisioning, deprovisioning, and account-level actions. Built to meet governance and compliance requirements with full traceability across all critical platform operations.</p>
-        <ul class="project-highlights">
-          <li>Covers create, update, delete across webhooks and SIMs</li>
-          <li>Pre-deletion name capture for accurate audit records</li>
-          <li>Structured event schema across multiple services</li>
-        </ul>
-        <div class="project-tags">
-          <span>Java</span><span>PostgreSQL</span><span>REST APIs</span><span>Microservices</span>
+        <div class="arch-row arch-row-secondary">
+          <div class="arch-node node-infra">Azure Key Vault<div class="arch-sub">Managed Identity</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-db">ScyllaDB<div class="arch-sub">Delivery audit trail</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-obs">Mailgun alert<div class="arch-sub">On max retry failure</div></div>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <span class="project-badge">Observability</span>
+      <div class="project-decisions">
+        <div class="decision-card">
+          <div class="decision-label">Design decision</div>
+          <p>Webhook sends had to be non-blocking — a slow customer endpoint couldn't stall the ingestion pipeline. Synchronous HTTP calls were the obvious trap here.</p>
+          <div class="decision-solution">Moved all webhook dispatch into goroutines so alert processing returns immediately. Each goroutine manages its own retry loop with exponential backoff (3 attempts, 2-hour intervals).</div>
         </div>
-        <h3>Unified Platform Observability Stack</h3>
-        <p>End-to-end observability infrastructure across the P5G platform covering Prometheus metrics collection, structured logging standardization, and Grafana dashboards for operational visibility.</p>
-        <ul class="project-highlights">
-          <li>P99 HTTP latency and per-vendor success rate tracking</li>
-          <li>In-flight job counts and pod-level CPU and memory usage</li>
-          <li>Replaced ad hoc monitoring with structured production visibility</li>
-        </ul>
-        <div class="project-tags">
-          <span>Prometheus</span><span>Grafana</span><span>PromQL</span><span>Structured Logging</span><span>Go</span>
+        <div class="decision-card">
+          <div class="decision-label">Observability gap</div>
+          <p>When webhooks silently failed after max retries, neither the customer nor internal ops team knew. The failure just disappeared into a log line.</p>
+          <div class="decision-solution">After exhausting retries: marks webhook as ERROR in user-pref-svc, then sends a Mailgun email to technical admins with failure metrics (404/500 counts), customer name from TrantorSvc, and webhook friendly name.</div>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">Production bug</div>
+          <p>Prometheus metric registration panicked on service restart because HTTP client constructors were registering the same metrics on each instantiation.</p>
+          <div class="decision-solution">Wrapped metric registration in <code>sync.Once</code> inside HTTP client constructors. Fixed CrashLoopBackOff and eliminated duplicate registration panics across all service restarts.</div>
         </div>
       </div>
+    </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-          </div>
+    <div class="project-full">
+      <div class="project-full-header">
+        <div class="project-full-left">
           <span class="project-badge">API Design</span>
+          <h3>SIM Lifecycle Management API v1→v2</h3>
+          <p class="project-summary">Full migration of SIM provisioning, deprovisioning, and editing APIs from v1 to v2 — cleaner REST shape, proper NDAC operation mapping, and handling of Nokia-specific edge cases that previously caused silent data loss.</p>
         </div>
-        <h3>SIM Lifecycle Management API</h3>
-        <p>Full v1 to v2 API migration for SIM provisioning, deprovisioning, and editing across multiple service layers. Handled complex vendor-specific edge cases including partial success responses and network change triggers.</p>
-        <ul class="project-highlights">
-          <li>PARTIAL_SUCCESS handling previously treated as failures</li>
-          <li>Auto deprovision and reprovision on network name changes</li>
-          <li>Targeted PATCH endpoint for partial DB updates on SIM edits</li>
-        </ul>
-        <div class="project-tags">
-          <span>Go</span><span>REST APIs</span><span>PostgreSQL</span><span>Nokia NDAC</span><span>Istio</span>
+        <div class="project-full-tags">
+          <span>Go</span><span>REST APIs</span><span>PostgreSQL</span><span>Nokia NDAC</span><span>Istio</span><span>user-audit-svc</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <div class="project-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/></svg>
-          </div>
-          <span class="project-badge">Geospatial</span>
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-svc">UI<div class="arch-sub">SIM action request</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">bff-layer<div class="arch-sub">route · validate · forward</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-infra">Istio mesh<div class="arch-sub">PATCH method allowed</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">hyperwave-svc<div class="arch-sub">provision · deprovision · edit</div></div>
         </div>
-        <h3>5G Site Geocoding Pipeline</h3>
-        <p>Google Maps API backed geocoding pipeline that converts raw Nokia latitude and longitude coordinates into human-readable addresses for 5G sites and RAN assets, enabling accurate location display across the platform.</p>
-        <ul class="project-highlights">
-          <li>Vault-backed Google API token injection for secure access</li>
-          <li>Covers both site and RAN asset address resolution</li>
-          <li>Integrated directly into the Nokia asset onboarding flow</li>
-        </ul>
-        <div class="project-tags">
+        <div class="arch-row arch-row-secondary">
+          <div class="arch-node node-vendor">Nokia NDAC<div class="arch-sub">PARTIAL_SUCCESS handled</div></div>
+          <div class="arch-arrow">←→</div>
+          <div class="arch-node node-svc">hyperwave-svc<div class="arch-sub">simultaneous write</div></div>
+          <div class="arch-arrow">←→</div>
+          <div class="arch-node node-db">PostgreSQL<div class="arch-sub">partial field update only</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-obs">user-audit-svc<div class="arch-sub">provision · edit · deprovision logs</div></div>
+        </div>
+      </div>
+
+      <div class="project-decisions">
+        <div class="decision-card">
+          <div class="decision-label">Nokia quirk</div>
+          <p>Nokia NDAC returns <code>PARTIAL_SUCCESS</code> for some provision/deprovision operations. The v1 code treated this as an error and rolled back — meaning valid operations were silently failing in production.</p>
+          <div class="decision-solution">Added explicit <code>PARTIAL_SUCCESS</code> handling in the NDAC client — now treated as success with a log entry. Caught by tracing real Nokia API responses against test hardware.</div>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">Data integrity bug</div>
+          <p>After deprovisioning a SIM, <code>NetworkName</code> stayed set in the DB. The next ingestion cycle would read stale state and attempt re-provisioning operations that had already been reversed.</p>
+          <div class="decision-solution">v2 deprovision handler now explicitly clears <code>NetworkName</code> and updates <code>UE_STATUS</code> to the deprovisioned state as part of the same DB transaction.</div>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">API completeness</div>
+          <p>The v1 edit endpoint did full overwrites — passing only <code>apnName</code> would clear <code>ueProfileName</code> even if not changed. This caused unintended SIM config resets.</p>
+          <div class="decision-solution">v2 uses a targeted <code>PATCH</code> with partial DB updates — only explicitly provided fields are written. Also had to add <code>PATCH</code> to Istio virtual service config, which blocked requests at the mesh layer.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-full">
+      <div class="project-full-header">
+        <div class="project-full-left">
+          <span class="project-badge">Observability</span>
+          <h3>Unified Platform Observability Stack</h3>
+          <p class="project-summary">Replaced ad hoc logging with a structured, unified observability layer across hyperwave-ingestion-svc, hyperwave-svc, and bff-layer — Prometheus metrics collection, structured slog standardization, and 5 Grafana dashboards covering every operational angle.</p>
+        </div>
+        <div class="project-full-tags">
+          <span>Prometheus</span><span>Grafana</span><span>PromQL</span><span>Go slog</span><span>Kubernetes</span>
+        </div>
+      </div>
+
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-svc">hyperwave-ingestion-svc<div class="arch-sub">emits metrics events</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-infra">metrics-relay-svc<div class="arch-sub">Kafka · fetch & forward</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">observability-svc<div class="arch-sub">16 Nokia PM instruments</div></div>
+        </div>
+        <div class="arch-row arch-row-secondary">
+          <div class="arch-node node-svc">observability-svc<div class="arch-sub">private5gPrometheusAdapter</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-db">Cortex<div class="arch-sub">time-series storage</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-obs">Prometheus<div class="arch-sub">P99 · success rates · runtime</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-obs">Grafana<div class="arch-sub">5 dashboards · PromQL</div></div>
+        </div>
+      </div>
+
+      <div class="project-decisions">
+        <div class="decision-card">
+          <div class="decision-label">What was missing</div>
+          <p>Services were using <code>log.Printf</code> and <code>fmt.Sprintf</code> inconsistently — no standard fields, no log levels, no structured output. Debugging a production incident meant grepping unstructured text across 3 services.</p>
+          <div class="decision-solution">Replaced all logging with a unified <code>LOG_LEVEL</code>-driven structured logger (slog, JSON stdout) with consistent key-value fields: <code>error</code>, <code>vendor</code>, <code>statusCode</code>, <code>organizationId</code> across all services.</div>
+        </div>
+        <div class="decision-card">
+          <div class="decision-label">Dashboard coverage</div>
+          <p>Built 5 dedicated Grafana dashboards: overall ingestion success rate, per-vendor success rates + timing, P99 HTTP latency (internal/external), Go runtime health (goroutines/OS threads), and Kubernetes pod count/CPU/memory by vendor.</p>
+          <div class="decision-solution">Added Nokia PM instruments as a dedicated <code>private5gPrometheusAdapter</code> — routes Nokia private 5G metrics independently so they don't pollute generic ingestion metrics.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-full project-full-compact">
+      <div class="project-full-header">
+        <div class="project-full-left">
+          <span class="project-badge">Geospatial</span>
+          <h3>5G Site Geocoding Pipeline</h3>
+          <p class="project-summary">Google Maps API–backed pipeline that converts raw Nokia lat/lng coordinates into human-readable addresses for 5G sites and RAN assets. Fixed Vault key loading so the Google API token is correctly injected via Azure Managed Identity.</p>
+        </div>
+        <div class="project-full-tags">
           <span>Go</span><span>Google Maps API</span><span>Azure Key Vault</span><span>Nokia 5G</span>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="section-label">Experience</div>
-    <h2 class="section-title">Where I've Worked</h2>
-    <div class="timeline">
-
-      <div class="timeline-item active">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Software Engineer</h3>
-              <p class="timeline-company">Armada AI</p>
-            </div>
-            <span class="timeline-date">Mar 2025 – Present</span>
-          </div>
-          <p class="timeline-location">Bellevue, WA</p>
-          <ul class="timeline-bullets">
-            <li>Designed end-to-end cloud-native data ingestion pipeline for private 5G and satellite infrastructure, integrating <strong>Nokia</strong> and <strong>Starlink</strong> vendor APIs into a unified analytics platform.</li>
-            <li>Built complete SIM lifecycle management APIs with end-to-end ownership, handling vendor-specific edge cases including silent data loss bugs that caused full SIM visibility loss in production.</li>
-            <li>Architected distributed webhook delivery system with <strong>HMAC</strong> signing, exponential backoff retry, persistent metadata, and async goroutine dispatch.</li>
-            <li>Built unified observability stack with <strong>Prometheus</strong> and <strong>Grafana</strong> covering P99 HTTP latency, per-vendor success rates, and pod-level resource usage.</li>
-            <li>Integrated <strong>Azure Key Vault</strong> with Managed Identity, eliminating hardcoded credentials across services.</li>
-            <li>Owned production incident response as primary on-call engineer, driving high-severity issue resolution and cross-team escalations.</li>
-          </ul>
-          <div class="timeline-tags">
-            <span>Go</span><span>Kubernetes</span><span>Azure</span><span>Prometheus</span><span>ScyllaDB</span><span>Nokia 5G</span>
-          </div>
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-vendor">Nokia NDAC<div class="arch-sub">lat/lng coordinates</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-infra">Azure Key Vault<div class="arch-sub">Google API token injection</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">Google Maps API<div class="arch-sub">Reverse geocoding</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-db">Asset store<div class="arch-sub">serviceAddress field</div></div>
         </div>
       </div>
+    </div>
 
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Software Development Engineer</h3>
-              <p class="timeline-company">Amazon Services LLC</p>
-            </div>
-            <span class="timeline-date">Oct 2022 – Mar 2025</span>
-          </div>
-          <p class="timeline-location">Bellevue, WA</p>
-          <ul class="timeline-bullets">
-            <li>Designed high-performance <strong>Java</strong> API with DynamoDB, reducing data retrieval times by 29%.</li>
-            <li>Architected ETL pipeline for <strong>1.2 billion</strong> metadata records into Redshift, cutting reporting time by 27%.</li>
-            <li>Executed throttling configuration that reduced service disruptions by <strong>95%</strong> during peak load.</li>
-            <li>Designed pre-production environment with <strong>AWS CodePipeline</strong> and CDK in TypeScript.</li>
-            <li>Engineered Java microservices with Spring Boot, reducing debugging time by 30% across critical projects.</li>
-            <li>Led SDLC efforts achieving 98% on-time delivery, serving as Scrum Master improving team productivity by 15%.</li>
-          </ul>
-          <div class="timeline-tags">
-            <span>Java</span><span>AWS</span><span>DynamoDB</span><span>Redshift</span><span>Spring Boot</span><span>Kubernetes</span>
-          </div>
+    <div class="project-full project-full-compact">
+      <div class="project-full-header">
+        <div class="project-full-left">
+          <span class="project-badge">Compliance</span>
+          <h3>Platform Audit Logging System</h3>
+          <p class="project-summary">Comprehensive audit trail across webhook lifecycle events (create, rename, delete, URL update) and SIM operations (provision, deprovision, edit) in user-audit-svc. Pre-deletion name capture ensures accurate records even after entity removal.</p>
+        </div>
+        <div class="project-full-tags">
+          <span>Go</span><span>PostgreSQL</span><span>user-audit-svc</span><span>user-pref-svc</span>
         </div>
       </div>
-
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Software Dev Intern</h3>
-              <p class="timeline-company">AbhiBus Services</p>
-            </div>
-            <span class="timeline-date">Dec 2019 – Apr 2020</span>
-          </div>
-          <p class="timeline-location">India</p>
-          <ul class="timeline-bullets">
-            <li>Built Python web scraping application reducing manual research time by 50 hours per month.</li>
-            <li>Engineered ML algorithm with <strong>90.4% accuracy</strong>, integrated into React.js for real-time predictions.</li>
-          </ul>
-          <div class="timeline-tags">
-            <span>Python</span><span>React.js</span><span>Machine Learning</span>
-          </div>
+      <div class="project-arch-diagram">
+        <div class="arch-row">
+          <div class="arch-node node-svc">SIM / Webhook action<div class="arch-sub">provision · edit · delete</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-svc">GET before DELETE<div class="arch-sub">capture name first</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-obs">user-audit-svc<div class="arch-sub">structured audit event</div></div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node node-db">PostgreSQL<div class="arch-sub">immutable audit log</div></div>
         </div>
       </div>
-
     </div>
-  </section>
 
-  <section id="contact">
-    <div class="section-label">Contact</div>
-    <div class="contact-wrapper">
-      <div class="contact-text">
-        <h2>Let's connect.</h2>
-        <p>Feel free to reach out for collaboration, opportunities, or just to talk tech.</p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:krishnacharanthota@gmail.com" class="contact-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <p class="contact-label">Email</p>
-            <p class="contact-value">krishnacharanthota@gmail.com</p>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/krishnacharanthota/" target="_blank" class="contact-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div>
-            <p class="contact-label">LinkedIn</p>
-            <p class="contact-value">krishnacharanthota</p>
-          </div>
-        </a>
-        <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="contact-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div>
-            <p class="contact-label">Book a call</p>
-            <p class="contact-value">topmate.io/krishna_charan_thota</p>
-          </div>
-        </a>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <h1 class="title">Where I've Worked</h1>
+  <div class="timeline">
+
+    <div class="timeline-item active">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Software Engineer</h3><p class="timeline-company">Armada AI</p></div>
+          <span class="timeline-date">Mar 2025 – Present</span>
+        </div>
+        <p class="timeline-location">Bellevue, WA</p>
+        <ul class="timeline-bullets">
+          <li>Designed end-to-end cloud-native data ingestion pipeline for private 5G and satellite infrastructure, integrating <strong>Nokia NDAC</strong> and <strong>Starlink</strong> vendor APIs covering RANs, SIMs, fault alarms, and 16 PM counters.</li>
+          <li>Implemented automatic <strong>RAN asset creation</strong> from Network Hardware Group detection — EnodeB hardware types trigger full RAN lifecycle onboarding including Metrics API wiring for alerting.</li>
+          <li>Built complete SIM lifecycle management APIs handling vendor-specific edge cases including <strong>PARTIAL_SUCCESS</strong> states, stale UE status after deprovision, and silent SIM visibility loss in production.</li>
+          <li>Architected distributed webhook delivery system with <strong>HMAC</strong> signing, exponential backoff retry, persistent ScyllaDB metadata, async goroutine dispatch, and Mailgun failure alerting.</li>
+          <li>Built unified observability stack with <strong>Prometheus</strong> and <strong>Grafana</strong> covering P99 HTTP latency, per-vendor success rates, and pod-level resource usage across all services.</li>
+          <li>Authored full <strong>OpenAPI/Swagger</strong> documentation covering 18 endpoints with dual versioned API base paths across hyperwave-svc, ingestion-svc, and BFF layer.</li>
+          <li>Implemented automated <strong>deployment rollback</strong> with health check validation across CI/CD pipelines, reducing failed deployments and improving release safety.</li>
+          <li>Patched <strong>CVE-2025-47914</strong> and gRPC security vulnerability across all three services; enforced 80% code coverage threshold in CI with PR-level coverage reporting.</li>
+          <li>Integrated <strong>Azure Key Vault</strong> with Managed Identity, eliminating hardcoded credentials and strengthening security compliance across services.</li>
+          <li>Owned production incident response as primary on-call engineer, driving high-severity issue resolution and cross-team escalation coordination.</li>
+        </ul>
+        <div class="timeline-tags"><span>Go</span><span>Kubernetes</span><span>Azure</span><span>Prometheus</span><span>ScyllaDB</span><span>Nokia 5G</span></div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <span class="logo">KCT</span>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <p>&#169; 2026 Krishna Charan Thota</p>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Software Development Engineer</h3><p class="timeline-company">Amazon Services LLC</p></div>
+          <span class="timeline-date">Oct 2022 – Mar 2025</span>
+        </div>
+        <p class="timeline-location">Bellevue, WA</p>
+        <ul class="timeline-bullets">
+          <li>Designed high-performance <strong>Java</strong> API with DynamoDB, reducing data retrieval times by 29%.</li>
+          <li>Architected ETL pipeline for <strong>1.2 billion</strong> metadata records into Redshift, cutting reporting time by 27%.</li>
+          <li>Executed throttling configuration that reduced service disruptions by <strong>95%</strong> during peak load.</li>
+          <li>Designed pre-production environment with <strong>AWS CodePipeline</strong> and CDK in TypeScript.</li>
+          <li>Led SDLC efforts achieving 98% on-time delivery, serving as Scrum Master improving team productivity by 15%.</li>
+        </ul>
+        <div class="timeline-tags"><span>Java</span><span>AWS</span><span>DynamoDB</span><span>Redshift</span><span>Spring Boot</span><span>Kubernetes</span></div>
+      </div>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Software Engineer</h3><p class="timeline-company">Uclid IT India Private Limited</p></div>
+          <span class="timeline-date">May 2020 – Jul 2021</span>
+        </div>
+        <p class="timeline-location">India</p>
+        <ul class="timeline-bullets">
+          <li>Engineered modular <strong>Java</strong> applications using OOP principles, reducing debugging time by 30% across five critical software projects.</li>
+          <li>Built cloud-native distributed systems using <strong>Spring Boot</strong> and Spring Cloud with RESTful and microservices architecture, integrated with NoSQL databases.</li>
+          <li>Led a 5-member cross-functional team delivering application development, support, and upgrades — achieving <strong>35% performance improvement</strong> and increased test coverage.</li>
+          <li>Promoted code quality through JUnit unit testing, using Bash, Kubernetes, Git, Jenkins, and Maven for reliable software delivery.</li>
+        </ul>
+        <div class="timeline-tags"><span>Java</span><span>Spring Boot</span><span>Spring Cloud</span><span>Kubernetes</span><span>Jenkins</span><span>REST APIs</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Software Dev Intern</h3><p class="timeline-company">AbhiBus Services</p></div>
+          <span class="timeline-date">Dec 2019 – Apr 2020</span>
+        </div>
+        <p class="timeline-location">India</p>
+        <ul class="timeline-bullets">
+          <li>Built Python web scraping application reducing manual research time by 50 hours per month.</li>
+          <li>Engineered ML algorithm with <strong>90.4% accuracy</strong>, integrated into React.js for real-time predictions.</li>
+        </ul>
+        <div class="timeline-tags"><span>Python</span><span>React.js</span><span>Machine Learning</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-label">Education</div>
+  <h1 class="title">Academic Background</h1>
+  <div class="timeline">
+
+    <div class="timeline-item active">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Master of Business Administration</h3><p class="timeline-company">WestCliff University</p></div>
+          <span class="timeline-date">Sep 2025 – Present</span>
+        </div>
+        <p class="timeline-location">United States</p>
+        <ul class="timeline-bullets">
+          <li>Deepening understanding of product strategy, business operations, and the intersection of technology and business decision-making.</li>
+        </ul>
+        <div class="timeline-tags"><span>MBA</span><span>Product Strategy</span><span>Business Operations</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Master of Professional Studies — Data Sciences & Applications</h3><p class="timeline-company">University at Buffalo, SUNY</p></div>
+          <span class="timeline-date">Aug 2021 – Aug 2022</span>
+        </div>
+        <p class="timeline-location">Buffalo, NY</p>
+        <ul class="timeline-bullets">
+          <li>Focused on data science, machine learning, and applied analytics bridging academic research and production engineering.</li>
+        </ul>
+        <div class="timeline-tags"><span>Data Science</span><span>Machine Learning</span><span>Analytics</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div><h3 class="timeline-role">Bachelor of Engineering — Computer Science</h3><p class="timeline-company">Vignan's Foundation for Science Technology and Research</p></div>
+          <span class="timeline-date">May 2016 – May 2020</span>
+        </div>
+        <p class="timeline-location">India</p>
+        <ul class="timeline-bullets">
+          <li>Computer Science and Engineering with focus on algorithms, distributed systems, and software engineering fundamentals.</li>
+        </ul>
+        <div class="timeline-tags"><span>Computer Science</span><span>Engineering</span><span>Algorithms</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <div class="contact-wrapper">
+    <div class="contact-text">
+      <h2>Let's connect.</h2>
+      <p>Open to senior backend and distributed systems roles — especially in infra, cloud-native, or telecom/5G domains. Feel free to reach out for collaboration or opportunities.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:krishnacharanthota@gmail.com" class="contact-item">
+        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><p class="contact-label">Email</p><p class="contact-value">krishnacharanthota@gmail.com</p></div>
+      </a>
+      <a href="https://www.linkedin.com/in/krishnacharanthota/" target="_blank" class="contact-item">
+        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div><p class="contact-label">LinkedIn</p><p class="contact-value">krishnacharanthota</p></div>
+      </a>
+      <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="contact-item">
+        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div><p class="contact-label">Book a call</p><p class="contact-value">topmate.io/krishna_charan_thota</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="logo">KCT</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p>© 2026 Krishna Charan Thota</p>
+  </div>
+</footer>
+
+<button id="chat-toggle" aria-label="Chat with Krishna's AI">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+
+<div id="chat-panel" class="chat-hidden" role="dialog" aria-label="Chat with Krishna">
+  <div class="chat-header">
+    <div class="chat-avatar">KC</div>
+    <div>
+      <p class="chat-header-name">Krishna Charan</p>
+      <p class="chat-header-status"><span class="online-dot" aria-hidden="true"></span>AI avatar · ask me anything</p>
+    </div>
+  </div>
+  <div id="chat-messages" aria-live="polite">
+    <div class="chat-msg bot">Hey! I'm Krishna's AI. I built distributed systems at Amazon and Private 5G infrastructure at Armada AI — ask me about my projects, tech decisions, or how to get in touch.</div>
+  </div>
+  <div class="chat-chips" id="chat-chips">
+    <button class="chat-chip" onclick="chatChip(this)">Nokia 5G pipeline</button>
+    <button class="chat-chip" onclick="chatChip(this)">Amazon experience</button>
+    <button class="chat-chip" onclick="chatChip(this)">Tech stack</button>
+    <button class="chat-chip" onclick="chatChip(this)">Open to work?</button>
+  </div>
+  <div class="chat-input-row">
+    <textarea id="chat-input" rows="1" placeholder="Ask about my work..." onkeydown="chatKey(event)" aria-label="Type your message"></textarea>
+    <button id="chat-send" onclick="chatSend()" aria-label="Send message">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function(){
+  const PROXY_URL="/.netlify/functions/chat";
+  let history=[],isOpen=false,isLoading=false;
+  const toggle=document.getElementById("chat-toggle");
+  const panel=document.getElementById("chat-panel");
+  const messagesEl=document.getElementById("chat-messages");
+  const inputEl=document.getElementById("chat-input");
+  const chipsEl=document.getElementById("chat-chips");
+  toggle.addEventListener("click",function(){isOpen=!isOpen;panel.classList.toggle("chat-hidden",!isOpen);if(isOpen)inputEl.focus();});
+  function addMsg(role,text){var div=document.createElement("div");div.className="chat-msg "+role;div.textContent=text;messagesEl.appendChild(div);messagesEl.scrollTop=messagesEl.scrollHeight;return div;}
+  function chatKey(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();chatSend();}}
+  function chatChip(el){inputEl.value=el.textContent;chipsEl.style.display="none";chatSend();}
+  async function chatSend(){if(isLoading)return;var text=inputEl.value.trim();if(!text)return;inputEl.value="";chipsEl.style.display="none";addMsg("user",text);history.push({role:"user",content:text});isLoading=true;var typingEl=addMsg("bot typing-indicator","typing...");try{var res=await fetch(PROXY_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:history})});var data=await res.json();var reply=data.reply||data.error||"Something went wrong.";typingEl.textContent=reply;typingEl.classList.remove("typing-indicator");history.push({role:"assistant",content:reply});}catch(e){typingEl.textContent="Network error — try again.";typingEl.classList.remove("typing-indicator");}isLoading=false;}
+  window.chatSend=chatSend;window.chatKey=chatKey;window.chatChip=chatChip;
+})();
+</script>
 </body>
 </html>

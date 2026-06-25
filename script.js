@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.section-label, .section-title, .about-card, .skill-group, .timeline-item, .project-card'
+  '.section-label, .about-card, .timeline-item, .project-full'
 ).forEach((el, i) => {
   el.style.transitionDelay = (i % 4) * 0.08 + 's';
   observer.observe(el);
