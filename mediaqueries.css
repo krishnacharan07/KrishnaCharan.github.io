@@ -1,6 +1,8 @@
 @media screen and (max-width:900px){
-  #hero{grid-template-columns:1fr;text-align:center;padding-top:100px;}
-  .hero-visual{display:none;}
+  #hero{grid-template-columns:1fr;text-align:center;padding-top:100px;gap:32px;}
+  .hero-visual{order:-1;}
+  .profile-ring{width:120px;height:120px;}
+  .hero-tags{max-width:100%;justify-content:center;}
   .hero-actions,.hero-socials,.hero-eyebrow{justify-content:center;}
   .about-grid{grid-template-columns:1fr;}
   .projects-grid{grid-template-columns:1fr;}
@@ -11,11 +13,13 @@
   #skills .skill-category:last-child{border-bottom:none!important;}
   #chat-panel{right:12px;left:12px;width:auto;bottom:88px;}
   #chat-toggle{right:16px;bottom:20px;}
+  .project-arch-diagram{overflow-x:auto;}
+  .arch-row{flex-wrap:nowrap;min-width:max-content;}
 }
 @media screen and (max-width:600px){
   section{padding:70px 5vw;}
-  .title{font-size:32px;}
-  .hero-name{font-size:36px;}
+  .title{font-size:28px;}
+  .hero-name{font-size:34px;}
   #desktop-nav{display:none;}
   #hamburger-nav{display:flex;justify-content:space-between;align-items:center;padding:0 5vw;height:60px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,17,23,.95);border-bottom:1px solid var(--navy-border);}
   .hamburger-icon{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
@@ -29,4 +33,8 @@
   #skills .icon-item i{font-size:28px;}
   .footer-inner{flex-direction:column;gap:16px;text-align:center;}
   .footer-inner nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;}
+  #chat-toggle{bottom:88px;right:16px;}
+  #chat-panel{bottom:156px;right:12px;left:12px;width:auto;}
+  .project-full{padding:20px 18px;}
+  .decision-card p{font-size:11.5px;}
 }
