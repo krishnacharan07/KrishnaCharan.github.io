@@ -47,6 +47,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
       if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.1 });
 
 sections.forEach(section => sectionObserver.observe(section));
