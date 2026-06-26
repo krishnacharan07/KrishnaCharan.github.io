@@ -1,3 +1,36 @@
+// Hero entrance animation
+(function() {
+  const elements = [
+    { selector: '.hero-eyebrow', delay: 0 },
+    { selector: '.hero-name', delay: 0.15 },
+    { selector: '.hero-title', delay: 0.3 },
+    { selector: '.hero-sub', delay: 0.45 },
+    { selector: '.hero-tags', delay: 0.6 },
+    { selector: '.hero-actions', delay: 0.75 },
+    { selector: '.hero-socials', delay: 0.9 },
+    { selector: '.hero-visual', delay: 0.2 },
+  ];
+
+  elements.forEach(({ selector, delay }) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s`;
+  });
+
+  window.addEventListener('load', () => {
+    elements.forEach(({ selector, delay }) => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, delay * 1000);
+    });
+  });
+})();
+
 function toggleMenu() {
   const menu = document.querySelector('.menu-links');
   const icon = document.querySelector('.hamburger-icon');
