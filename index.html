@@ -671,7 +671,9 @@
   const messagesEl=document.getElementById("chat-messages");
   const inputEl=document.getElementById("chat-input");
   const chipsEl=document.getElementById("chat-chips");
-  toggle.addEventListener("click",function(){isOpen=!isOpen;panel.classList.toggle("chat-hidden",!isOpen);if(isOpen)inputEl.focus();});
+  toggle.addEventListener("click",function(e){e.stopPropagation();isOpen=!isOpen;panel.classList.toggle("chat-hidden",!isOpen);if(isOpen)inputEl.focus();});
+  panel.addEventListener("click",function(e){e.stopPropagation();});
+  document.addEventListener("click",function(){if(isOpen){isOpen=false;panel.classList.add("chat-hidden");}});
   function addMsg(role,text){var div=document.createElement("div");div.className="chat-msg "+role;div.textContent=text;messagesEl.appendChild(div);messagesEl.scrollTop=messagesEl.scrollHeight;return div;}
   function chatKey(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();chatSend();}}
   function chatChip(el){inputEl.value=el.textContent;chipsEl.style.display="none";chatSend();}
