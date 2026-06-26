@@ -12,13 +12,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(12px);-
 .nav-links a{font-size:13px;color:var(--text-muted);text-decoration:none;letter-spacing:.02em;transition:color .2s;}
 .nav-links a:hover{color:var(--text-primary);}
 #hamburger-nav{display:none;}
-section{padding:100px 6vw;max-width:1100px;margin:0 auto;}
+section{padding:100px 6vw;max-width:1100px;margin:0 auto;scroll-margin-top:80px;}
 .section-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;}
 .title{font-size:40px;font-weight:300;font-family:"DM Serif Display",serif;font-style:italic;color:var(--text-primary);margin-bottom:48px;line-height:1.1;}
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding-top:120px;max-width:1100px;margin:0 auto;}
 .hero-content{max-width:600px;}
 .hero-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:20px;}
-.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:eyebrow-pulse 2s ease-in-out infinite;}
+@keyframes eyebrow-pulse{0%,100%{box-shadow:0 0 0 0 rgba(63,185,80,.6);}50%{box-shadow:0 0 0 5px rgba(63,185,80,0);}}
 .eyebrow-text{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
 .hero-name{font-size:clamp(42px,5vw,64px);font-weight:500;line-height:1.1;color:var(--text-primary);margin-bottom:14px;font-family:"DM Serif Display",serif;}
 .hero-name em{font-style:italic;color:var(--text-muted);}
@@ -185,3 +186,4 @@ footer{border-top:1px solid var(--navy-border);padding:24px 6vw;}
 nav.scrolled{background:rgba(13,17,23,.98);border-bottom-color:rgba(255,255,255,.08);box-shadow:0 1px 20px rgba(0,0,0,.3);}
 .about-card,.timeline-item,.project-full{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease;}
 .section-label.visible,.about-card.visible,.timeline-item.visible,.project-full.visible{opacity:1;transform:translateY(0);}
+.nav-links a.active{color:var(--text-primary);}
