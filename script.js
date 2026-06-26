@@ -59,7 +59,8 @@ const counterObserver = new IntersectionObserver((entries) => {
     el.dataset.counted = 'true';
     const raw = el.dataset.target;
     const suffix = el.dataset.suffix || '';
-    animateCounter(el, parseFloat(raw), 1500, suffix);
+    const duration = parseFloat(raw) >= 1000000000 ? 3000 : 1500;
+    animateCounter(el, parseFloat(raw), duration, suffix);
     counterObserver.unobserve(el);
   });
 }, { threshold: 0.5 });
