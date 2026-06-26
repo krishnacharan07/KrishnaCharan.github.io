@@ -31,6 +31,41 @@
   });
 })();
 
+// Animated number counters
+function animateCounter(el, target, duration, suffix) {
+  let start = 0;
+  const increment = target / (duration / 16);
+  const timer = setInterval(() => {
+    start += increment;
+    if (start >= target) {
+      start = target;
+      clearInterval(timer);
+    }
+    if (target >= 1000000000) {
+      el.textContent = (start / 1000000000).toFixed(1) + 'B' + suffix;
+    } else if (target >= 1000000) {
+      el.textContent = (start / 1000000).toFixed(0) + 'M' + suffix;
+    } else {
+      el.textContent = Math.floor(start) + suffix;
+    }
+  }, 16);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    if (el.dataset.counted) return;
+    el.dataset.counted = 'true';
+    const raw = el.dataset.target;
+    const suffix = el.dataset.suffix || '';
+    animateCounter(el, parseFloat(raw), 1500, suffix);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+
 function toggleMenu() {
   const menu = document.querySelector('.menu-links');
   const icon = document.querySelector('.hamburger-icon');
