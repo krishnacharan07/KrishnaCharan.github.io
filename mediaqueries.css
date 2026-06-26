@@ -11,8 +11,8 @@
   #skills .skill-category:nth-child(3n+1),#skills .skill-category:nth-child(3n+2){border-right:none;}
   #skills .skill-category{border-bottom:1px solid var(--navy-surface)!important;}
   #skills .skill-category:last-child{border-bottom:none!important;}
-  #chat-panel{right:12px;left:12px;width:auto;bottom:88px;}
-  #chat-toggle{right:16px;bottom:20px;}
+  #chat-panel{right:12px;left:12px;width:auto;bottom:calc(88px + env(safe-area-inset-bottom, 0px));}
+  #chat-toggle{right:16px;bottom:calc(20px + env(safe-area-inset-bottom, 0px));}
   .project-arch-diagram{overflow-x:auto;}
   .arch-row{flex-wrap:nowrap;min-width:max-content;}
 }
@@ -22,7 +22,7 @@
   .hero-name{font-size:34px;}
   #desktop-nav{display:none;}
   #hamburger-nav{display:flex;justify-content:space-between;align-items:center;padding:0 5vw;height:60px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,17,23,.95);border-bottom:1px solid var(--navy-border);}
-  .hamburger-icon{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+  .hamburger-icon{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:10px;margin:-10px;}
   .hamburger-icon span{width:24px;height:1.5px;background:var(--text-primary);transition:transform .3s,opacity .3s;}
   .menu-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--navy-surface);border-bottom:1px solid var(--navy-border);padding:16px 5vw;}
   .menu-links.open{display:block;}
@@ -33,8 +33,8 @@
   #skills .icon-item i{font-size:28px;}
   .footer-inner{flex-direction:column;gap:16px;text-align:center;}
   .footer-inner nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;}
-  #chat-toggle{bottom:88px;right:16px;}
-  #chat-panel{bottom:156px;right:12px;left:12px;width:auto;}
+  #chat-toggle{bottom:calc(88px + env(safe-area-inset-bottom, 0px));right:16px;}
+  #chat-panel{bottom:calc(156px + env(safe-area-inset-bottom, 0px));right:12px;left:12px;width:auto;}
   .project-full{padding:20px 18px;}
   .decision-card p{font-size:11.5px;}
 }
