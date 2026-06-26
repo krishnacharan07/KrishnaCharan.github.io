@@ -38,13 +38,17 @@ window.addEventListener('scroll', () => {
 
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+const dotLinks = document.querySelectorAll('.dot-link');
 
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => link.classList.remove('active'));
+      dotLinks.forEach(link => link.classList.remove('active'));
       const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
       if (active) active.classList.add('active');
+      const activeDot = document.querySelector(`.dot-link[href="#${entry.target.id}"]`);
+      if (activeDot) activeDot.classList.add('active');
     }
   });
 }, { threshold: 0.1 });
