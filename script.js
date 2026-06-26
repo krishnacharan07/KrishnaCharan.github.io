@@ -53,15 +53,15 @@ function animateCounter(el, target, duration, suffix) {
 
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
     const el = entry.target;
-    if (el.dataset.counted) return;
-    el.dataset.counted = 'true';
     const raw = el.dataset.target;
     const suffix = el.dataset.suffix || '';
-    const duration = parseFloat(raw) >= 1000000000 ? 3000 : 1500;
-    animateCounter(el, parseFloat(raw), duration, suffix);
-    counterObserver.unobserve(el);
+    if (entry.isIntersecting) {
+      const duration = parseFloat(raw) >= 1000000000 ? 3000 : 1500;
+      animateCounter(el, parseFloat(raw), duration, suffix);
+    } else {
+      el.textContent = '0' + suffix;
+    }
   });
 }, { threshold: 0.5 });
 
