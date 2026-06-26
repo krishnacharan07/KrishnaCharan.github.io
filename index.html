@@ -302,18 +302,15 @@
       <div class="project-decisions">
         <div class="decision-card">
           <div class="decision-label">Design decision</div>
-          <p>Webhook sends had to be non-blocking — a slow customer endpoint couldn't stall the ingestion pipeline. Synchronous HTTP calls were the obvious trap here.</p>
-          <div class="decision-solution">Moved all webhook dispatch into goroutines so alert processing returns immediately. Each goroutine manages its own retry loop with exponential backoff (3 attempts, 2-hour intervals).</div>
+          <p>Slow customer endpoints couldn't block the pipeline. Moved all dispatch into goroutines with exponential backoff retry (3 attempts, 2-hour intervals).</p>
         </div>
         <div class="decision-card">
           <div class="decision-label">Observability gap</div>
-          <p>When webhooks silently failed after max retries, neither the customer nor internal ops team knew. The failure just disappeared into a log line.</p>
-          <div class="decision-solution">After exhausting retries: marks webhook as ERROR in user-pref-svc, then sends a Mailgun email to technical admins with failure metrics (404/500 counts), customer name from TrantorSvc, and webhook friendly name.</div>
+          <p>Silent failures after max retries went unnoticed. Now marks webhook as ERROR in user-pref-svc and sends Mailgun alert with failure metrics to technical admins.</p>
         </div>
         <div class="decision-card">
           <div class="decision-label">Production bug</div>
-          <p>Prometheus metric registration panicked on service restart because HTTP client constructors were registering the same metrics on each instantiation.</p>
-          <div class="decision-solution">Wrapped metric registration in <code>sync.Once</code> inside HTTP client constructors. Fixed CrashLoopBackOff and eliminated duplicate registration panics across all service restarts.</div>
+          <p>Prometheus panicked on restart from duplicate metric registration. Wrapped constructors in <code>sync.Once</code> — fixed CrashLoopBackOff across all restarts.</p>
         </div>
       </div>
     </div>
@@ -354,18 +351,15 @@
       <div class="project-decisions">
         <div class="decision-card">
           <div class="decision-label">Nokia quirk</div>
-          <p>Nokia NDAC returns <code>PARTIAL_SUCCESS</code> for some provision/deprovision operations. The v1 code treated this as an error and rolled back — meaning valid operations were silently failing in production.</p>
-          <div class="decision-solution">Added explicit <code>PARTIAL_SUCCESS</code> handling in the NDAC client — now treated as success with a log entry. Caught by tracing real Nokia API responses against test hardware.</div>
+          <p>Nokia NDAC returns <code>PARTIAL_SUCCESS</code> for valid operations. v1 treated it as error and rolled back. Now handled as success with a log entry.</p>
         </div>
         <div class="decision-card">
           <div class="decision-label">Data integrity bug</div>
-          <p>After deprovisioning a SIM, <code>NetworkName</code> stayed set in the DB. The next ingestion cycle would read stale state and attempt re-provisioning operations that had already been reversed.</p>
-          <div class="decision-solution">v2 deprovision handler now explicitly clears <code>NetworkName</code> and updates <code>UE_STATUS</code> to the deprovisioned state as part of the same DB transaction.</div>
+          <p>After deprovision, <code>NetworkName</code> stayed in DB causing stale re-provisioning. v2 now clears it and updates <code>UE_STATUS</code> in the same transaction.</p>
         </div>
         <div class="decision-card">
           <div class="decision-label">API completeness</div>
-          <p>The v1 edit endpoint did full overwrites — passing only <code>apnName</code> would clear <code>ueProfileName</code> even if not changed. This caused unintended SIM config resets.</p>
-          <div class="decision-solution">v2 uses a targeted <code>PATCH</code> with partial DB updates — only explicitly provided fields are written. Also had to add <code>PATCH</code> to Istio virtual service config, which blocked requests at the mesh layer.</div>
+          <p>v1 full overwrites cleared unrelated fields. v2 uses targeted <code>PATCH</code> with partial DB updates — also had to add PATCH to Istio virtual service config.</p>
         </div>
       </div>
     </div>
@@ -404,13 +398,11 @@
       <div class="project-decisions">
         <div class="decision-card">
           <div class="decision-label">What was missing</div>
-          <p>Services were using <code>log.Printf</code> and <code>fmt.Sprintf</code> inconsistently — no standard fields, no log levels, no structured output. Debugging a production incident meant grepping unstructured text across 3 services.</p>
-          <div class="decision-solution">Replaced all logging with a unified <code>LOG_LEVEL</code>-driven structured logger (slog, JSON stdout) with consistent key-value fields: <code>error</code>, <code>vendor</code>, <code>statusCode</code>, <code>organizationId</code> across all services.</div>
+          <p>Inconsistent <code>log.Printf</code> across 3 services made incident debugging painful. Replaced with unified slog JSON logger with standard key-value fields.</p>
         </div>
         <div class="decision-card">
           <div class="decision-label">Dashboard coverage</div>
-          <p>Built 5 dedicated Grafana dashboards: overall ingestion success rate, per-vendor success rates + timing, P99 HTTP latency (internal/external), Go runtime health (goroutines/OS threads), and Kubernetes pod count/CPU/memory by vendor.</p>
-          <div class="decision-solution">Added Nokia PM instruments as a dedicated <code>private5gPrometheusAdapter</code> — routes Nokia private 5G metrics independently so they don't pollute generic ingestion metrics.</div>
+          <p>5 Grafana dashboards: ingestion success rates, P99 latency, Go runtime health, Kubernetes pod metrics, and 16 Nokia PM instruments via a dedicated adapter.</p>
         </div>
       </div>
     </div>
