@@ -482,14 +482,10 @@
         <ul class="timeline-bullets">
           <li>Designed end-to-end cloud-native data ingestion pipeline for private 5G and satellite infrastructure, integrating <strong>Nokia NDAC</strong> and <strong>Starlink</strong> vendor APIs covering RANs, SIMs, fault alarms, and 16 PM counters.</li>
           <li>Implemented automatic <strong>RAN asset creation</strong> from Network Hardware Group detection — EnodeB hardware types trigger full RAN lifecycle onboarding including Metrics API wiring for alerting.</li>
-          <li>Built complete SIM lifecycle management APIs handling vendor-specific edge cases including <strong>PARTIAL_SUCCESS</strong> states, stale UE status after deprovision, and silent SIM visibility loss in production.</li>
           <li>Architected distributed webhook delivery system with <strong>HMAC</strong> signing, exponential backoff retry, persistent ScyllaDB metadata, async goroutine dispatch, and Mailgun failure alerting.</li>
           <li>Built unified observability stack with <strong>Prometheus</strong> and <strong>Grafana</strong> covering P99 HTTP latency, per-vendor success rates, and pod-level resource usage across all services.</li>
-          <li>Authored full <strong>OpenAPI/Swagger</strong> documentation covering 18 endpoints with dual versioned API base paths across hyperwave-svc, ingestion-svc, and BFF layer.</li>
-          <li>Implemented automated <strong>deployment rollback</strong> with health check validation across CI/CD pipelines, reducing failed deployments and improving release safety.</li>
-          <li>Patched <strong>CVE-2025-47914</strong> and gRPC security vulnerability across all three services; enforced 80% code coverage threshold in CI with PR-level coverage reporting.</li>
-          <li>Integrated <strong>Azure Key Vault</strong> with Managed Identity, eliminating hardcoded credentials and strengthening security compliance across services.</li>
-          <li>Owned production incident response as primary on-call engineer, driving high-severity issue resolution and cross-team escalation coordination.</li>
+          <li>Implemented automated <strong>deployment rollback</strong> with health check validation across CI/CD pipelines; authored full OpenAPI/Swagger docs covering 18 endpoints with dual versioned API base paths.</li>
+          <li>Patched <strong>CVE-2025-47914</strong> and gRPC security vulnerability; enforced 80% code coverage in CI; owned production incident response as primary on-call engineer.</li>
         </ul>
         <div class="timeline-tags"><span>Go</span><span>Kubernetes</span><span>Azure</span><span>Prometheus</span><span>ScyllaDB</span><span>Nokia 5G</span></div>
       </div>
