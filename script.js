@@ -66,6 +66,66 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
 
+// Staggered project card entrance
+const projectObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const card = entry.target;
+    if (card.dataset.animated) return;
+    card.dataset.animated = 'true';
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+    projectObserver.unobserve(card);
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.project-full').forEach((card, i) => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(40px)';
+  card.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`;
+  projectObserver.observe(card);
+});
+
+// Staggered timeline entrance
+const timelineObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const item = entry.target;
+    if (item.dataset.animated) return;
+    item.dataset.animated = 'true';
+    item.style.opacity = '1';
+    item.style.transform = 'translateX(0)';
+    timelineObserver.unobserve(item);
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.timeline-item').forEach((item, i) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateX(-20px)';
+  item.style.transition = `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`;
+  timelineObserver.observe(item);
+});
+
+// Staggered skill category entrance
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const cat = entry.target;
+    if (cat.dataset.animated) return;
+    cat.dataset.animated = 'true';
+    cat.style.opacity = '1';
+    cat.style.transform = 'translateY(0) scale(1)';
+    skillObserver.unobserve(cat);
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.skill-category').forEach((cat, i) => {
+  cat.style.opacity = '0';
+  cat.style.transform = 'translateY(20px) scale(0.98)';
+  cat.style.transition = `opacity 0.5s ease ${i * 0.06}s, transform 0.5s ease ${i * 0.06}s`;
+  skillObserver.observe(cat);
+});
+
 function toggleMenu() {
   const menu = document.querySelector('.menu-links');
   const icon = document.querySelector('.hamburger-icon');
