@@ -33,8 +33,8 @@
   #skills .icon-item i{font-size:28px;}
   .footer-inner{flex-direction:column;gap:16px;text-align:center;}
   .footer-inner nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;}
-  #chat-toggle{bottom:calc(88px + env(safe-area-inset-bottom, 0px));right:16px;}
-  #chat-panel{bottom:calc(156px + env(safe-area-inset-bottom, 0px));right:12px;left:12px;width:auto;}
+  #chat-toggle{bottom:calc(24px + env(safe-area-inset-bottom, 0px));right:16px;}
+  #chat-panel{bottom:calc(92px + env(safe-area-inset-bottom, 0px));right:12px;left:12px;width:auto;max-height:calc(100svh - 120px);max-height:calc(100vh - 120px);}
   .project-full{padding:20px 18px;}
   .decision-card p{font-size:11.5px;}
 }
