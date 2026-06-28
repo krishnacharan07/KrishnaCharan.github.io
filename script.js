@@ -99,6 +99,55 @@ document.querySelectorAll('.project-arch-diagram').forEach(diag => {
   diagObserver.observe(diag);
 });
 
+// Contact items staggered entrance
+const contactObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const section = entry.target;
+    if (section.dataset.animated) return;
+    section.dataset.animated = 'true';
+    const items = section.querySelectorAll('.contact-item');
+    items.forEach((item, i) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(16px)';
+      item.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
+      setTimeout(() => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, i * 100);
+    });
+    contactObserver.unobserve(section);
+  });
+}, { threshold: 0.2 });
+
+const contactSection = document.querySelector('#contact');
+if (contactSection) {
+  contactSection.querySelectorAll('.contact-item').forEach(item => {
+    item.style.opacity = '0';
+  });
+  contactObserver.observe(contactSection);
+}
+
+// Skills section count badge
+const skillsSection = document.querySelector('#skills');
+if (skillsSection) {
+  const badge = document.createElement('p');
+  badge.textContent = '6 categories · 35 tools';
+  badge.style.cssText = 'font-size:12px;color:var(--text-dim);margin-top:-36px;margin-bottom:36px;opacity:0;transition:opacity 0.6s ease 0.3s;';
+  const title = skillsSection.querySelector('.title');
+  if (title) title.after(badge);
+
+  const skillsBadgeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        badge.style.opacity = '1';
+        skillsBadgeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  skillsBadgeObserver.observe(skillsSection);
+}
+
 // Animated number counters
 function animateCounter(el, target, duration, suffix) {
   let start = 0;
