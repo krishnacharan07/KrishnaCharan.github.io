@@ -188,6 +188,8 @@ nav.scrolled{background:rgba(13,17,23,.98);border-bottom-color:rgba(255,255,255,
 .about-card,.timeline-item,.project-full{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease;}
 .section-label.visible,.about-card.visible,.timeline-item.visible,.project-full.visible{opacity:1;transform:translateY(0);}
 .nav-links a.active{color:var(--text-primary);}
-.calendly-wrapper{max-width:1100px;margin:0 auto;padding:0 6vw 80px;}
-.calendly-title{font-size:32px;font-weight:400;font-family:"DM Serif Display",serif;color:var(--text-primary);margin-bottom:32px;}
-.calendly-inline-widget{border-radius:16px;overflow:hidden;border:1px solid var(--navy-border);}
+.calendly-wrapper{max-width:860px;margin:0 auto;padding:48px 6vw 80px;}
+.calendly-header{text-align:center;margin-bottom:32px;}
+.calendly-title{font-size:36px;font-weight:400;font-family:"DM Serif Display",serif;font-style:italic;color:var(--text-primary);margin-bottom:10px;}
+.calendly-sub{font-size:14px;color:var(--text-muted);line-height:1.6;}
+.calendly-inline-widget{border-radius:16px;overflow:hidden;border:1px solid var(--navy-border);box-shadow:0 4px 24px rgba(0,0,0,.3);}
