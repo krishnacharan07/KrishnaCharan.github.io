@@ -44,7 +44,6 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#schedule">Schedule</a></li>
   </ul>
 </nav>
 
@@ -62,7 +61,6 @@
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
         <li><a href="#education" onclick="toggleMenu()">Education</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
       </ul>
     </div>
   </div>
@@ -602,36 +600,32 @@
 
 <section id="contact">
   <div class="section-label">Contact</div>
-  <div class="contact-wrapper">
-    <div class="contact-text">
-      <h2>Let's connect.</h2>
-      <p>Open to senior backend and distributed systems roles — especially in infra, cloud-native, or telecom/5G domains. Feel free to reach out for collaboration or opportunities.</p>
+  <h1 class="title">Let's connect.</h1>
+  <div class="contact-combined">
+    <div class="contact-left">
+      <p class="contact-desc">Open to senior backend and distributed systems roles — especially infra, cloud-native, or telecom/5G. Reach out directly or book time below.</p>
+      <div class="contact-links">
+        <a href="mailto:krishnacharanthota@gmail.com" class="contact-item">
+          <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><p class="contact-label">Email</p><p class="contact-value">krishnacharanthota@gmail.com</p></div>
+        </a>
+        <a href="https://www.linkedin.com/in/krishnacharanthota/" target="_blank" class="contact-item">
+          <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><p class="contact-label">LinkedIn</p><p class="contact-value">krishnacharanthota</p></div>
+        </a>
+        <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="contact-item">
+          <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div><p class="contact-label">Topmate</p><p class="contact-value">topmate.io/krishna_charan_thota</p></div>
+        </a>
+      </div>
     </div>
-    <div class="contact-links">
-      <a href="mailto:krishnacharanthota@gmail.com" class="contact-item">
-        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div><p class="contact-label">Email</p><p class="contact-value">krishnacharanthota@gmail.com</p></div>
-      </a>
-      <a href="https://www.linkedin.com/in/krishnacharanthota/" target="_blank" class="contact-item">
-        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <div><p class="contact-label">LinkedIn</p><p class="contact-value">krishnacharanthota</p></div>
-      </a>
-      <a href="https://topmate.io/krishna_charan_thota" target="_blank" class="contact-item">
-        <div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <div><p class="contact-label">Book a call</p><p class="contact-value">topmate.io/krishna_charan_thota</p></div>
-      </a>
+    <div class="contact-right">
+      <div class="section-label" style="margin-bottom:8px;">Schedule a call</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">30 min · Google Meet · No agenda required.</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/krishnacharanthota/30min?hide_gdpr_banner=1&background_color=161b22&text_color=e6edf3&primary_color=58a6ff" style="min-width:280px;height:580px;border-radius:16px;overflow:hidden;border:1px solid var(--navy-border);"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </div>
-
-  </div>
-</section>
-
-<section id="schedule" style="scroll-margin-top:80px;">
-  <div class="section-label">Schedule</div>
-  <h1 class="title">Book time with me</h1>
-  <p style="font-size:14px;color:var(--text-muted);margin-top:-32px;margin-bottom:32px;line-height:1.7;">30 minutes · Google Meet · No agenda required. Pick a slot that works for you.</p>
-  <div class="calendly-inline-widget" data-url="https://calendly.com/krishnacharanthota/30min?hide_gdpr_banner=1&background_color=161b22&text_color=e6edf3&primary_color=58a6ff" style="min-width:320px;height:700px;border-radius:16px;overflow:hidden;border:1px solid var(--navy-border);"></div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </section>
 
 <footer>
@@ -644,7 +638,6 @@
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <a href="#schedule">Schedule</a>
     </nav>
     <p>© 2026 Krishna Charan Thota</p>
   </div>

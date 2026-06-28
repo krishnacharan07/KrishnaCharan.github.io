@@ -7,6 +7,7 @@
   .about-grid{grid-template-columns:1fr;}
   .projects-grid{grid-template-columns:1fr;}
   .contact-wrapper{grid-template-columns:1fr;gap:32px;}
+  .contact-combined{grid-template-columns:1fr;gap:32px;}
   #skills .skills-grid{grid-template-columns:1fr;}
   #skills .skill-category:nth-child(3n+1),#skills .skill-category:nth-child(3n+2){border-right:none;}
   #skills .skill-category{border-bottom:1px solid var(--navy-surface)!important;}
