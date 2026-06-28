@@ -274,11 +274,14 @@ document.querySelectorAll('.nav-links a, .menu-links a').forEach(link => {
 });
 
 window.addEventListener('scroll', () => {
-  const nav = document.getElementById('desktop-nav') || document.getElementById('hamburger-nav');
+  const desktopNav = document.getElementById('desktop-nav');
+  const hamburgerNav = document.getElementById('hamburger-nav');
   if (window.scrollY > 20) {
-    nav?.classList.add('scrolled');
+    desktopNav?.classList.add('scrolled');
+    hamburgerNav?.classList.add('scrolled');
   } else {
-    nav?.classList.remove('scrolled');
+    desktopNav?.classList.remove('scrolled');
+    hamburgerNav?.classList.remove('scrolled');
   }
 });
 
@@ -293,6 +296,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
       if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.1 });
+}, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
 sections.forEach(section => sectionObserver.observe(section));
