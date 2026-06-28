@@ -63,6 +63,42 @@
   setTimeout(type, 800);
 })();
 
+// Architecture diagram arrow animation
+const diagObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const diag = entry.target;
+    if (diag.dataset.animated) return;
+    diag.dataset.animated = 'true';
+    const nodes = diag.querySelectorAll('.arch-node');
+    const arrows = diag.querySelectorAll('.arch-arrow');
+    nodes.forEach((node, i) => {
+      node.style.opacity = '0';
+      node.style.transform = 'translateY(8px)';
+      node.style.transition = `opacity 0.4s ease ${i * 0.12}s, transform 0.4s ease ${i * 0.12}s`;
+      setTimeout(() => {
+        node.style.opacity = '1';
+        node.style.transform = 'translateY(0)';
+      }, i * 120);
+    });
+    arrows.forEach((arrow, i) => {
+      arrow.style.opacity = '0';
+      arrow.style.transition = `opacity 0.3s ease ${i * 0.12 + 0.1}s`;
+      setTimeout(() => {
+        arrow.style.opacity = '1';
+      }, i * 120 + 100);
+    });
+    diagObserver.unobserve(diag);
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.project-arch-diagram').forEach(diag => {
+  diag.querySelectorAll('.arch-node, .arch-arrow').forEach(el => {
+    el.style.opacity = '0';
+  });
+  diagObserver.observe(diag);
+});
+
 // Animated number counters
 function animateCounter(el, target, duration, suffix) {
   let start = 0;
