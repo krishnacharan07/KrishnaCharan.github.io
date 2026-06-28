@@ -1,3 +1,7 @@
+@media screen and (max-width:1050px){
+  .contact-combined{grid-template-columns:1fr;gap:32px;}
+  .contact-wrapper{grid-template-columns:1fr;gap:32px;}
+}
 @media screen and (max-width:900px){
   #hero{grid-template-columns:1fr;text-align:center;padding-top:100px;gap:32px;}
   .hero-visual{order:-1;}
@@ -6,8 +10,6 @@
   .hero-actions,.hero-socials,.hero-eyebrow{justify-content:center;}
   .about-grid{grid-template-columns:1fr;}
   .projects-grid{grid-template-columns:1fr;}
-  .contact-wrapper{grid-template-columns:1fr;gap:32px;}
-  .contact-combined{grid-template-columns:1fr;gap:32px;}
   #skills .skills-grid{grid-template-columns:1fr;}
   #skills .skill-category:nth-child(3n+1),#skills .skill-category:nth-child(3n+2){border-right:none;}
   #skills .skill-category{border-bottom:1px solid var(--navy-surface)!important;}

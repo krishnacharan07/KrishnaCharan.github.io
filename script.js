@@ -260,7 +260,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.section-label, .about-card, .timeline-item, .project-full'
+  '.section-label, .about-card'
 ).forEach((el, i) => {
   el.style.transitionDelay = (i % 4) * 0.08 + 's';
   observer.observe(el);
