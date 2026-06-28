@@ -31,6 +31,38 @@
   });
 })();
 
+// Typing cursor on hero title
+(function() {
+  const titleEl = document.querySelector('.hero-title');
+  if (!titleEl) return;
+  const fullText = titleEl.textContent;
+  titleEl.textContent = '';
+  titleEl.style.opacity = '1';
+  titleEl.style.transform = 'none';
+
+  const cursor = document.createElement('span');
+  cursor.textContent = '|';
+  cursor.style.cssText = 'color:var(--accent);animation:blink 1s step-end infinite;margin-left:1px;';
+  titleEl.appendChild(cursor);
+
+  const style = document.createElement('style');
+  style.textContent = '@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}';
+  document.head.appendChild(style);
+
+  let i = 0;
+  const speed = 40;
+  function type() {
+    if (i < fullText.length) {
+      titleEl.insertBefore(document.createTextNode(fullText[i]), cursor);
+      i++;
+      setTimeout(type, speed);
+    } else {
+      setTimeout(() => { cursor.style.animation = 'none'; cursor.style.opacity = '0'; }, 2000);
+    }
+  }
+  setTimeout(type, 800);
+})();
+
 // Animated number counters
 function animateCounter(el, target, duration, suffix) {
   let start = 0;
